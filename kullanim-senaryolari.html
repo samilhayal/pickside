@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pickside — Kullanım Senaryoları</title>
+  <meta name="description" content="Pickside nasıl kullanılır? Gerçek kullanım senaryoları ve günlük hayattan örnekler.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#09090f;--bg2:#0f1018;--bg3:#141520;--orange:#f97316;--orange2:#fb923c;--og:linear-gradient(135deg,#f97316 0%,#f59e0b 100%);--border:rgba(255,255,255,.08);--surface:rgba(255,255,255,.05);--text:#f1f2f5;--muted:#7a8099;--muted2:#a0aab8}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;min-height:100vh}
+    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;padding:0 clamp(20px,5vw,60px);display:flex;align-items:center;justify-content:space-between;background:rgba(9,9,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    nav a{text-decoration:none}
+    nav img{height:32px;object-fit:contain}
+    .nav-links{display:flex;gap:24px}
+    .nav-links a{color:var(--muted2);font-size:.88rem;font-weight:500;transition:.2s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{display:inline-flex;align-items:center;gap:7px;background:var(--og);color:#fff;font-weight:700;font-size:.85rem;padding:8px 18px;border-radius:999px;box-shadow:0 4px 20px rgba(249,115,22,.3);transition:.2s}
+    .nav-cta:hover{transform:translateY(-1px)}
+    @media(max-width:640px){.nav-links{display:none}}
+
+    main{padding:100px clamp(20px,5vw,60px) 80px;max-width:960px;margin:0 auto}
+    .page-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.22);color:var(--orange2);padding:.4em 1.1em;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+    .page-title{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:800;line-height:1.04;letter-spacing:-.035em;margin-bottom:14px}
+    .page-sub{color:var(--muted2);font-size:1.05rem;line-height:1.7;max-width:560px;margin-bottom:60px}
+
+    .scenario-list{display:flex;flex-direction:column;gap:24px}
+    .scenario{background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:0;overflow:hidden;transition:.3s}
+    .scenario:hover{border-color:rgba(249,115,22,.25)}
+    .scenario-header{display:flex;align-items:center;gap:18px;padding:24px 28px}
+    .s-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:rgba(249,115,22,.18);flex-shrink:0;line-height:1;min-width:52px}
+    .s-icon{font-size:1.8rem;flex-shrink:0}
+    .s-header-text h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+    .s-header-text p{color:var(--muted2);font-size:.88rem}
+    .scenario-body{padding:0 28px 26px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .s-context{color:var(--muted2);font-size:.93rem;line-height:1.72;grid-column:1}
+    .s-card{grid-column:2;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:14px;padding:18px 16px}
+    .s-card-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+    .s-card-topic{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:10px;line-height:1.3}
+    .s-options{display:flex;flex-direction:column;gap:6px}
+    .s-opt{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:7px 10px;font-size:.8rem;color:var(--muted2);display:flex;align-items:center;gap:7px}
+    .s-opt.picked{border-color:rgba(249,115,22,.4);background:rgba(249,115,22,.07);color:var(--text)}
+    .s-opt .arrow{font-size:.75rem;opacity:.6}
+
+    .use-cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+    .uc-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:20px}
+    .uc-icon{font-size:1.6rem;margin-bottom:10px}
+    .uc-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:6px}
+    .uc-card p{color:var(--muted2);font-size:.85rem;line-height:1.6}
+
+    .cta-section{background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.2);border-radius:20px;padding:36px;text-align:center;margin-top:48px}
+    .cta-section h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:10px;letter-spacing:-.025em}
+    .cta-section p{color:var(--muted2);margin-bottom:24px}
+    .cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    .btn-dl{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.9rem;font-family:inherit;transition:.25s}
+    .btn-ios{background:#fff;color:#09090f}
+    .btn-ios:hover{transform:translateY(-2px)}
+    .btn-and{background:var(--og);color:#fff;box-shadow:0 6px 20px rgba(249,115,22,.3)}
+    .btn-and:hover{transform:translateY(-2px)}
+
+    .site-footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px clamp(20px,5vw,60px) 0}
+    .footer-top{display:grid;grid-template-columns:280px 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+    .footer-brand img{height:32px;opacity:.8;margin-bottom:14px;display:block}
+    .footer-brand p{color:var(--muted);font-size:.9rem;line-height:1.65;margin-bottom:22px}
+    .footer-stores{display:flex;flex-wrap:wrap;gap:8px}
+    .f-store{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:10px;padding:8px 14px;color:var(--muted2);text-decoration:none;font-size:.8rem;font-weight:600;transition:.2s}
+    .f-store:hover{border-color:rgba(249,115,22,.3);color:var(--orange2)}
+    .footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    .footer-col h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:16px}
+    .footer-col a{display:block;color:var(--muted);text-decoration:none;font-size:.88rem;margin-bottom:10px;transition:.2s}
+    .footer-col a:hover{color:var(--orange2)}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:20px 0}
+    .footer-bottom span,.footer-bottom a{color:var(--muted);font-size:.82rem;text-decoration:none}
+    .footer-bottom a:hover{color:var(--orange2)}
+    @media(max-width:860px){.footer-top{grid-template-columns:1fr;gap:36px}.scenario-body{grid-template-columns:1fr}.s-card{grid-column:1}}
+    @media(max-width:640px){.use-cases-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.footer-nav{grid-template-columns:repeat(2,1fr)}.scenario-header{gap:12px}.s-num{font-size:2rem}}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.on{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html"><img src="logo.png" alt="Pickside"></a>
+  <div class="nav-links"><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a></div>
+  <a class="nav-cta" href="#">İndir</a>
+</nav>
+
+<main>
+  <div class="page-tag">📱 Nasıl Kullanılır?</div>
+  <h1 class="page-title reveal">Kullanım<br>Senaryoları</h1>
+  <p class="page-sub reveal d1">Pickside günlük hayatta nasıl kullanılır? Gerçek senaryolar ve örnek kartlarla tanı.</p>
+
+  <div class="scenario-list">
+
+    <div class="scenario reveal">
+      <div class="scenario-header">
+        <div class="s-num">01</div>
+        <div class="s-icon">☕</div>
+        <div class="s-header-text">
+          <h2>Sabah rutini: Güne haberlere bakarak başla</h2>
+          <p>Her sabah 2–3 dakika, o günün gündemine bak</p>
+        </div>
+      </div>
+      <div class="scenario-body">
+        <div class="s-context">
+          <p>Uygulamayı açıyorsun. O gün öne çıkan 10 kart seni bekliyor. Ekonomi, magazin, teknoloji... Her biri farklı bir konu.</p>
+          <p>Kartları hızlıca geçiyorsun. Swipe sol, sağ, yukarı — birkaç saniyede görüşünü seçiyorsun. Oy verdikten sonra toplumun ne düşündüğünü görüyorsun.</p>
+          <p>Kahven soğumadan bitti. Ama o gün herhangi bir konuda sohbet açıldığında ne düşündüğünü ve toplumun ne düşündüğünü biliyorsun.</p>
+        </div>
+        <div class="s-card">
+          <div class="s-card-label">🔥 Gündem • Teknoloji</div>
+          <div class="s-card-topic">Yapay zeka iş hayatında tehdit mi, fırsat mı?</div>
+          <div class="s-options">
+            <div class="s-opt"><span class="arrow">←</span> Tehdit — iş kayıpları kaçınılmaz</div>
+            <div class="s-opt picked"><span class="arrow">↑</span> Fırsat — yeni meslekler doğacak ✓</div>
+            <div class="s-opt"><span class="arrow">→</span> İkisi de — dönüşüm zorunlu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario reveal d1">
+      <div class="scenario-header">
+        <div class="s-num">02</div>
+        <div class="s-icon">🧑‍🎓</div>
+        <div class="s-header-text">
+          <h2>Öğrenci: Toplumun gerçekte ne düşündüğünü merak et</h2>
+          <p>Sosyal medya balonunun dışına çık</p>
+        </div>
+      </div>
+      <div class="scenario-body">
+        <div class="s-context">
+          <p>Takip ettiğin hesaplar, baktığın içerikler hep benzer görüşleri gösteriyor. Algoritma seni bir balonun içine hapsetti.</p>
+          <p>Pickside'da oy verdiğinde çevrendeki insanların değil, geniş bir topluluğun dağılımını görüyorsun. %18 azınlıkta kalmak da öğretici. %72 çoğunlukta olmak da.</p>
+          <p>Bu bilgi seni sosyal medyada daha sağlıklı tartışmaya hazırlıyor.</p>
+        </div>
+        <div class="s-card">
+          <div class="s-card-label">📚 Gündem • Eğitim</div>
+          <div class="s-card-topic">Üniversite eğitimi hâlâ zorunlu mu?</div>
+          <div class="s-options">
+            <div class="s-opt"><span class="arrow">←</span> Kariyer diplomayla başlar</div>
+            <div class="s-opt"><span class="arrow">↑</span> CV değil, beceri önemli</div>
+            <div class="s-opt picked"><span class="arrow">→</span> Eğitim sistemi güncellenmeli ✓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario reveal d1">
+      <div class="scenario-header">
+        <div class="s-num">03</div>
+        <div class="s-icon">🏆</div>
+        <div class="s-header-text">
+          <h2>Rekabetçi kullanıcı: Leaderboard'da yukarı çık</h2>
+          <p>Her gün oyla, sıralamada yüksel</p>
+        </div>
+      </div>
+      <div class="scenario-body">
+        <div class="s-context">
+          <p>Her gün tüm kartları oyluyorsun. Leaderboard'da haftalık ve aylık sıralamaya giriyorsun.</p>
+          <p>Oy verdikçe persona analizin şekilleniyor. Diplomat mısın, Asi mi? Çoğunlukla mı hareket ediyorsun, yoksa kendi yolunu mu çiziyorsun?</p>
+          <p>Seri kırılmadan devam et — bu hafta #1 olabilirsin.</p>
+        </div>
+        <div class="s-card" style="background:rgba(249,115,22,.06);border-color:rgba(249,115,22,.2)">
+          <div class="s-card-label" style="color:var(--orange2)">🏆 Profil • Sıralama</div>
+          <div class="s-card-topic">Bu Haftaki Durumun</div>
+          <div class="s-options">
+            <div class="s-opt picked" style="justify-content:space-between"><span>Bu Hafta</span><strong style="color:var(--orange2)">#1</strong></div>
+            <div class="s-opt" style="justify-content:space-between"><span>Bu Ay</span><strong>#4</strong></div>
+            <div class="s-opt" style="justify-content:space-between"><span>Toplam Oy</span><strong>142</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario reveal d2">
+      <div class="scenario-header">
+        <div class="s-num">04</div>
+        <div class="s-icon">🗣️</div>
+        <div class="s-header-text">
+          <h2>Sosyal paylaşım: Arkadaşlarını şaşırt</h2>
+          <p>Bir kart sonucunu paylaş, tartışmayı başlat</p>
+        </div>
+      </div>
+      <div class="scenario-body">
+        <div class="s-context">
+          <p>Bir karta oy verdin. Sonuçlar beklenmedik — %50 tam ortadan bölünmüş. Ya da sen azınlıkta kaldın.</p>
+          <p>Paylaş butonuna basıyorsun. Whatsapp grubuna ya da sosyal medyaya atıyorsun. "Siz ne derdiniz?" diye soruyorsun. Tartışma başlıyor.</p>
+          <p>Pickside bir sohbet başlatıcı olarak da işe yarıyor.</p>
+        </div>
+        <div class="s-card">
+          <div class="s-card-label">📊 Sonuç • Topluluk bölünmüş</div>
+          <div class="s-card-topic">Sosyal medyada ünlü olmak değer mi?</div>
+          <div class="s-options">
+            <div class="s-opt" style="justify-content:space-between"><span>Kişisel seçim, saygı duyulmalı</span><strong>%49</strong></div>
+            <div class="s-opt picked" style="justify-content:space-between"><span>Mahremiyet kaybı büyük risk ✓</span><strong style="color:var(--orange2)">%32</strong></div>
+            <div class="s-opt" style="justify-content:space-between"><span>Bağlama göre değişir</span><strong>%19</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="use-cases-grid">
+    <div class="uc-card reveal d1">
+      <div class="uc-icon">📰</div>
+      <h3>Haber takipçisi</h3>
+      <p>Güncel gelişmelere kendi perspektifini katıyorsun.</p>
+    </div>
+    <div class="uc-card reveal d2">
+      <div class="uc-icon">🧠</div>
+      <h3>Kendini tanımak isteyenler</h3>
+      <p>Persona analizi sana davranış kalıplarını gösteriyor.</p>
+    </div>
+    <div class="uc-card reveal d3">
+      <div class="uc-icon">⚡</div>
+      <h3>Kısa molalar</h3>
+      <p>2-3 dakikada 5-6 kart. Asansörde, beklerken.</p>
+    </div>
+  </div>
+
+  <div class="cta-section reveal">
+    <h2>Hemen dene.</h2>
+    <p>iOS ve Android için ücretsiz. Kayıt gerekmez.</p>
+    <div class="cta-btns">
+      <a class="btn-dl btn-ios" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        App Store'dan İndir
+      </a>
+      <a class="btn-dl btn-and" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.18.7.2 1.04.06l9.8-9.8-2.32-2.32-8.52 12.06zm15.09-12.45L15.5 9.57 5.24 3.7c-.4-.23-.86-.23-1.24-.02l10.55 10.55 3.72-2.92zM20.4 10.6l-2.3-1.33-2.6 2.6 2.6 2.6 2.32-1.34c.66-.38.66-1.15-.02-1.53zM4 3.68c-.02.1-.03.22-.03.35v15.94c0 .13.01.25.04.36l.1-.1L13 11.32 4 3.68z"/></svg>
+        Google Play'den İndir
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Pickside">
+        <p>Gündemdeki konulara oy ver.<br>Toplumun nabzını ölç.</p>
+        <div class="footer-stores">
+          <a class="f-store" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</a>
+          <a class="f-store" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.18.7.2 1.04.06l9.8-9.8-2.32-2.32-8.52 12.06zm15.09-12.45L15.5 9.57 5.24 3.7c-.4-.23-.86-.23-1.24-.02l10.55 10.55 3.72-2.92zM20.4 10.6l-2.3-1.33-2.6 2.6 2.6 2.6 2.32-1.34c.66-.38.66-1.15-.02-1.53zM4 3.68c-.02.1-.03.22-.03.35v15.94c0 .13.01.25.04.36l.1-.1L13 11.32 4 3.68z"/></svg>Google Play</a>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <div class="footer-col"><h4>Uygulama</h4><a href="hakkimizda.html">Hakkımızda</a><a href="kullanim-senaryolari.html">Kullanım Senaryoları</a><a href="iletisim.html">İletişim</a></div>
+        <div class="footer-col"><h4>Yasal</h4><a href="gizlilik.html">Gizlilik Politikası</a><a href="kullanim-sartlari.html">Kullanım Şartları</a><a href="kvkk.html">KVKK Aydınlatma Metni</a></div>
+        <div class="footer-col"><h4>Destek</h4><a href="iletisim.html">İletişim</a><a href="data-deletion.html">Verilerimi Sıfırla</a></div>
+      </nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Pickside. Tüm hakları saklıdır.</span><a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
