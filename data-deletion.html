@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pickside | Veri Silme</title>
+  <meta name="description" content="Pickside data deletion instructions">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #edf2ff;
+      --bg-deep: #dfe8ff;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-border: rgba(255, 255, 255, 0.78);
+      --ink: #111827;
+      --brand-dark: #163ea8;
+      --line: #dbe6ff;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 15% -10%, #c9d8ff 0%, transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, #d8e3ff 0%, transparent 58%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+      padding: 22px 12px 30px;
+    }
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(300px 300px at 85% 18%, rgba(59, 130, 246, .11), transparent 72%),
+        radial-gradient(260px 260px at 12% 72%, rgba(37, 99, 235, .08), transparent 76%);
+      z-index: -1;
+    }
+
+    .frame {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow:
+        0 30px 70px rgba(22, 62, 168, .16),
+        inset 0 1px 0 rgba(255, 255, 255, .65);
+      overflow: hidden;
+      animation: rise .75s cubic-bezier(.2, .7, .3, 1) both;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(29, 78, 216, .10) 0%, rgba(37, 99, 235, .03) 65%, transparent 100%);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .logo {
+      width: clamp(112px, 20vw, 156px);
+      max-height: 64px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 8px 18px rgba(29, 78, 216, .22));
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: #3158b4;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .69rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .title {
+      margin: 5px 0 0;
+      font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+      line-height: 1.1;
+      letter-spacing: -.015em;
+    }
+
+    .lang {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid #cbd8ff;
+      background: rgba(255, 255, 255, .93);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9);
+      flex-shrink: 0;
+    }
+
+    .lang button {
+      border: 0;
+      background: transparent;
+      color: #364152;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .lang button.active {
+      background: linear-gradient(135deg, #2459e5 0%, #1b47c4 100%);
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(29, 78, 216, .24);
+    }
+
+    .body {
+      padding: 20px 20px 22px;
+    }
+
+    .updated {
+      display: inline-block;
+      margin: 0 0 14px;
+      color: #334155;
+      font-size: .9rem;
+      font-weight: 600;
+      background: #f3f7ff;
+      border: 1px solid #d9e5ff;
+      border-radius: 999px;
+      padding: .38rem .7rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .hero-card,
+    .quick-card,
+    .contact-card {
+      border: 1px solid #d6e3ff;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f7faff 0%, #eef4ff 100%);
+      padding: 14px 15px;
+    }
+
+    .hero-card h2,
+    .quick-card h2,
+    .policy h2 {
+      margin: 0 0 8px;
+      font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+      font-size: 1rem;
+      color: #0f172a;
+      letter-spacing: -.01em;
+    }
+
+    .hero-card p,
+    .quick-card p,
+    .policy p,
+    .contact-card p {
+      margin: 0 0 10px;
+      color: #1f2937;
+      line-height: 1.68;
+      font-size: .97rem;
+    }
+
+    .quick-card ol {
+      margin: 0;
+      padding-left: 18px;
+      color: #1f2937;
+    }
+
+    .quick-card li {
+      margin: 6px 0;
+      line-height: 1.6;
+    }
+
+    .policy {
+      font-size: .99rem;
+      line-height: 1.72;
+      color: #1f2937;
+    }
+
+    .policy ul {
+      margin: 0 0 12px;
+      padding-left: 18px;
+    }
+
+    .policy li {
+      margin: 4px 0;
+    }
+
+    .policy h2 {
+      margin-top: 18px;
+      padding-left: 10px;
+      border-left: 3px solid #2d5ce2;
+      line-height: 1.35;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .cta-primary {
+      background: linear-gradient(135deg, #2459e5 0%, #1b47c4 100%);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(29, 78, 216, .18);
+    }
+
+    .cta-secondary {
+      background: #ffffff;
+      color: #1d4ed8;
+      border: 1px solid #cddcff;
+    }
+
+    .contact-card {
+      margin-top: 18px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 4px;
+      font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+      font-size: .95rem;
+      color: #12338f;
+    }
+
+    a {
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 10px;
+      color: #64748b;
+      font-size: .84rem;
+      font-weight: 600;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px) scale(.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .body {
+        padding: 14px 14px 16px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .top {
+        padding: 12px;
+      }
+
+      .brand {
+        gap: 9px;
+      }
+
+      .logo {
+        width: clamp(98px, 30vw, 126px);
+        max-height: 56px;
+      }
+
+      .title {
+        font-size: 1.02rem;
+      }
+
+      .policy,
+      .hero-card p,
+      .quick-card p,
+      .contact-card p,
+      .quick-card li {
+        font-size: .95rem;
+        line-height: 1.66;
+      }
+
+      .updated {
+        font-size: .85rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .top {
+        align-items: flex-start;
+      }
+
+      .brand-copy {
+        display: none;
+      }
+
+      .logo {
+        width: 110px;
+      }
+
+      .cta {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <div class="frame">
+    <header class="top">
+      <div class="brand">
+        <img class="logo" src="logo.png" alt="Pickside logo">
+        <div class="brand-copy">
+          <p class="eyebrow">Official Document</p>
+          <p class="title">Data Deletion</p>
+        </div>
+      </div>
+
+      <div class="lang" role="group" aria-label="Language switch">
+        <button id="btn-tr" class="active" type="button">TR</button>
+        <button id="btn-en" type="button">EN</button>
+      </div>
+    </header>
+
+    <section class="body" id="content-tr">
+      <h1 class="title">Veri Silme Yönlendirmesi</h1>
+      <p class="updated"><strong>Son Güncelleme:</strong> 16 Mart 2026</p>
+
+      <div class="hero">
+        <div class="hero-card">
+          <h2>Uygulama içinden sıfırlama</h2>
+          <p>Pickside uygulamasını kullanan kullanıcılar, uygulama ile ilişkili verilerinin silinmesini doğrudan uygulama içinden talep edebilir.</p>
+          <p>Uygulama içindeki yol: <strong>Profil &gt; Ayarlar &gt; Verilerimi Sıfırla</strong></p>
+          <div class="cta-row">
+            <a class="cta cta-primary" href="index.html">Gizlilik Politikasına Dön</a>
+            <a class="cta cta-secondary" href="mailto:samil.hayal@gmail.com?subject=Pickside%20Veri%20Silme%20Talebi">E-posta Gönder</a>
+          </div>
+        </div>
+
+        <div class="quick-card">
+          <h2>Hızlı özet</h2>
+          <ol>
+            <li>Uygulamada <strong>Profil &gt; Ayarlar &gt; Verilerimi Sıfırla</strong> adımını izleyin.</li>
+            <li>Alternatif olarak <a href="mailto:samil.hayal@gmail.com">samil.hayal@gmail.com</a> adresine yazın.</li>
+            <li>E-postanızda uygulamada kullandığınız kullanıcı adını belirtin.</li>
+          </ol>
+        </div>
+      </div>
+
+      <article class="policy">
+        <h2>Silme talebi hakkı</h2>
+        <p>Pickside uygulamasını kullanan kullanıcılar, uygulama ile ilişkili verilerinin silinmesini talep edebilir.</p>
+
+        <h2>Silinebilen veriler</h2>
+        <ul>
+          <li>Kullanıcı adı</li>
+          <li>Profil verileri</li>
+          <li>Oylama geçmişi</li>
+          <li>Bildirim cihaz kimliği</li>
+        </ul>
+
+        <h2>E-posta ile talep oluşturma</h2>
+        <p>Veri silme talebi oluşturmak için aşağıdaki e-posta adresine yazabilirsiniz:</p>
+        <p><a href="mailto:samil.hayal@gmail.com">samil.hayal@gmail.com</a></p>
+        <p>E-postanızda uygulamada kullandığınız kullanıcı adını belirtmeniz yeterlidir. Talebiniz doğrulandıktan sonra verileriniz sistemlerimizden silinir.</p>
+
+        <h2>Ek bilgi</h2>
+        <p>Yasal yükümlülükler nedeniyle anonim teknik loglar kısa bir süre saklanabilir.</p>
+      </article>
+
+      <div class="contact-card" aria-label="Veri silme iletisim">
+        <h3>Veri Silme İletişimi</h3>
+        <p>Android için bu sayfayı veri silme URL'si olarak kullanabilirsiniz:</p>
+        <p><a href="https://samilhayal.github.io/pickside-privacy/data-deletion.html">https://samilhayal.github.io/pickside-privacy/data-deletion.html</a></p>
+      </div>
+    </section>
+
+    <section class="body" id="content-en" hidden>
+      <h1 class="title">Data Deletion Instructions</h1>
+      <p class="updated"><strong>Last Updated:</strong> March 16, 2026</p>
+
+      <div class="hero">
+        <div class="hero-card">
+          <h2>Reset inside the app</h2>
+          <p>Pickside users can request deletion of app-related data directly from inside the application.</p>
+          <p>In-app path: <strong>Profile &gt; Settings &gt; Reset My Data</strong></p>
+          <div class="cta-row">
+            <a class="cta cta-primary" href="index.html">Back to Privacy Policy</a>
+            <a class="cta cta-secondary" href="mailto:samil.hayal@gmail.com?subject=Pickside%20Data%20Deletion%20Request">Send Email</a>
+          </div>
+        </div>
+
+        <div class="quick-card">
+          <h2>Quick summary</h2>
+          <ol>
+            <li>Use <strong>Profile &gt; Settings &gt; Reset My Data</strong> in the app.</li>
+            <li>Or email <a href="mailto:samil.hayal@gmail.com">samil.hayal@gmail.com</a>.</li>
+            <li>Include the username you use in the app.</li>
+          </ol>
+        </div>
+      </div>
+
+      <article class="policy">
+        <h2>Right to request deletion</h2>
+        <p>Users of the Pickside application may request deletion of data associated with the app.</p>
+
+        <h2>Data that can be deleted</h2>
+        <ul>
+          <li>Username</li>
+          <li>Profile data</li>
+          <li>Voting history</li>
+          <li>Notification device identifier</li>
+        </ul>
+
+        <h2>How to create a deletion request</h2>
+        <p>To create a data deletion request, you can write to the following email address:</p>
+        <p><a href="mailto:samil.hayal@gmail.com">samil.hayal@gmail.com</a></p>
+        <p>It is enough to include the username you use in the application. After your request is verified, your data will be deleted from our systems.</p>
+
+        <h2>Additional note</h2>
+        <p>Anonymous technical logs may be retained for a short period due to legal obligations.</p>
+      </article>
+
+      <div class="contact-card" aria-label="Data deletion contact">
+        <h3>Data Deletion URL</h3>
+        <p>You can use the following dedicated Android data deletion URL:</p>
+        <p><a href="https://samilhayal.github.io/pickside-privacy/data-deletion.html">https://samilhayal.github.io/pickside-privacy/data-deletion.html</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>&copy; 2026 Pickside</footer>
+
+  <script>
+    const tr = document.getElementById('content-tr');
+    const en = document.getElementById('content-en');
+    const trBtn = document.getElementById('btn-tr');
+    const enBtn = document.getElementById('btn-en');
+
+    trBtn.addEventListener('click', () => {
+      tr.hidden = false;
+      en.hidden = true;
+      trBtn.classList.add('active');
+      enBtn.classList.remove('active');
+      document.documentElement.lang = 'tr';
+    });
+
+    enBtn.addEventListener('click', () => {
+      tr.hidden = true;
+      en.hidden = false;
+      enBtn.classList.add('active');
+      trBtn.classList.remove('active');
+      document.documentElement.lang = 'en';
+    });
+  </script>
+</body>
+</html>
