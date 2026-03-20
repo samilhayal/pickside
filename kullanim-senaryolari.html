@@ -89,14 +89,17 @@
 <body>
 <nav>
   <a href="index.html"><img src="logo.png" alt="Pickside"></a>
-  <div class="nav-links"><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a></div>
-  <a class="nav-cta" href="index.html">İndir</a>
+  <div class="nav-links"><a href="hakkimizda.html" data-i18n="nav.hakkimizda">Hakkımızda</a><a href="iletisim.html" data-i18n="nav.iletisim">İletişim</a></div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <button id="lang-btn" class="lang-btn" onclick="toggleLang()">EN</button>
+    <a class="nav-cta" href="index.html" data-i18n="nav.indir">İndir</a>
+  </div>
 </nav>
 
 <main>
-  <div class="page-tag">📱 Nasıl Kullanılır?</div>
-  <h1 class="page-title reveal">Kullanım<br>Senaryoları</h1>
-  <p class="page-sub reveal d1">Pickside günlük hayatta nasıl kullanılır? Gerçek senaryolar ve örnek kartlarla tanı.</p>
+  <div class="page-tag" data-i18n="scenarios.tag">📱 Nasıl Kullanılır?</div>
+  <h1 class="page-title reveal" data-i18n="scenarios.title">Kullanım<br>Senaryoları</h1>
+  <p class="page-sub reveal d1" data-i18n="scenarios.sub">Pickside günlük hayatta nasıl kullanılır? Gerçek senaryolar ve örnek kartlarla tanı.</p>
 
   <div class="scenario-list">
 
@@ -105,15 +108,15 @@
         <div class="s-num">01</div>
         <div class="s-icon">☕</div>
         <div class="s-header-text">
-          <h2>Sabah rutini: Güne haberlere bakarak başla</h2>
-          <p>Her sabah 2–3 dakika, o günün gündemine bak</p>
+          <h2 data-i18n="s1.title">Sabah rutini: Güne haberlere bakarak başla</h2>
+          <p data-i18n="s1.sub">Her sabah 2–3 dakika, o günün gündemine bak</p>
         </div>
       </div>
       <div class="scenario-body">
         <div class="s-context">
-          <p>Uygulamayı açıyorsun. O gün öne çıkan 10 kart seni bekliyor. Ekonomi, magazin, teknoloji... Her biri farklı bir konu.</p>
-          <p>Kartları hızlıca geçiyorsun. Swipe sol, sağ, yukarı — birkaç saniyede görüşünü seçiyorsun. Oy verdikten sonra toplumun ne düşündüğünü görüyorsun.</p>
-          <p>Kahven soğumadan bitti. Ama o gün herhangi bir konuda sohbet açıldığında ne düşündüğünü ve toplumun ne düşündüğünü biliyorsun.</p>
+          <p data-i18n="s1.p1">Uygulamayı açıyorsun. O gün öne çıkan 10 kart seni bekliyor. Ekonomi, magazin, teknoloji... Her biri farklı bir konu.</p>
+          <p data-i18n="s1.p2">Kartları hızlıca geçiyorsun. Swipe sol, sağ, yukarı — birkaç saniyede görüşünü seçiyorsun. Oy verdikten sonra toplumun ne düşündüğünü görüyorsun.</p>
+          <p data-i18n="s1.p3">Kahven soğumadan bitti. Ama o gün herhangi bir konuda sohbet açıldığında ne düşündüğünü ve toplumun ne düşündüğünü biliyorsun.</p>
         </div>
         <div class="s-card">
           <div class="s-card-label">🔥 Gündem • Teknoloji</div>
@@ -132,15 +135,15 @@
         <div class="s-num">02</div>
         <div class="s-icon">🧑‍🎓</div>
         <div class="s-header-text">
-          <h2>Öğrenci: Toplumun gerçekte ne düşündüğünü merak et</h2>
-          <p>Sosyal medya balonunun dışına çık</p>
+          <h2 data-i18n="s2.title">Öğrenci: Toplumun gerçekte ne düşündüğünü merak et</h2>
+          <p data-i18n="s2.sub">Sosyal medya balonunun dışına çık</p>
         </div>
       </div>
       <div class="scenario-body">
         <div class="s-context">
-          <p>Takip ettiğin hesaplar, baktığın içerikler hep benzer görüşleri gösteriyor. Algoritma seni bir balonun içine hapsetti.</p>
-          <p>Pickside'da oy verdiğinde çevrendeki insanların değil, geniş bir topluluğun dağılımını görüyorsun. %18 azınlıkta kalmak da öğretici. %72 çoğunlukta olmak da.</p>
-          <p>Bu bilgi seni sosyal medyada daha sağlıklı tartışmaya hazırlıyor.</p>
+          <p data-i18n="s2.p1">Takip ettiğin hesaplar, baktığın içerikler hep benzer görüşleri gösteriyor. Algoritma seni bir balonun içine hapsetti.</p>
+          <p data-i18n="s2.p2">Pickside'da oy verdiğinde çevrendeki insanların değil, geniş bir topluluğun dağılımını görüyorsun. %18 azınlıkta kalmak da öğretici. %72 çoğunlukta olmak da.</p>
+          <p data-i18n="s2.p3">Bu bilgi seni sosyal medyada daha sağlıklı tartışmaya hazırlıyor.</p>
         </div>
         <div class="s-card">
           <div class="s-card-label">📚 Gündem • Eğitim</div>
@@ -159,15 +162,15 @@
         <div class="s-num">03</div>
         <div class="s-icon">🏆</div>
         <div class="s-header-text">
-          <h2>Rekabetçi kullanıcı: Leaderboard'da yukarı çık</h2>
-          <p>Her gün oyla, sıralamada yüksel</p>
+          <h2 data-i18n="s3.title">Rekabetçi kullanıcı: Leaderboard'da yukarı çık</h2>
+          <p data-i18n="s3.sub">Her gün oyla, sıralamada yüksel</p>
         </div>
       </div>
       <div class="scenario-body">
         <div class="s-context">
-          <p>Her gün tüm kartları oyluyorsun. Leaderboard'da haftalık ve aylık sıralamaya giriyorsun.</p>
-          <p>Oy verdikçe persona analizin şekilleniyor. Diplomat mısın, Asi mi? Çoğunlukla mı hareket ediyorsun, yoksa kendi yolunu mu çiziyorsun?</p>
-          <p>Seri kırılmadan devam et — bu hafta #1 olabilirsin.</p>
+          <p data-i18n="s3.p1">Her gün tüm kartları oyluyorsun. Leaderboard'da haftalık ve aylık sıralamaya giriyorsun.</p>
+          <p data-i18n="s3.p2">Oy verdikçe persona analizin şekilleniyor. Diplomat mısın, Asi mi? Çoğunlukla mı hareket ediyorsun, yoksa kendi yolunu mu çiziyorsun?</p>
+          <p data-i18n="s3.p3">Seri kırılmadan devam et — bu hafta #1 olabilirsin.</p>
         </div>
         <div class="s-card" style="background:rgba(249,115,22,.06);border-color:rgba(249,115,22,.2)">
           <div class="s-card-label" style="color:var(--orange2)">🏆 Profil • Sıralama</div>
@@ -186,15 +189,15 @@
         <div class="s-num">04</div>
         <div class="s-icon">🗣️</div>
         <div class="s-header-text">
-          <h2>Sosyal paylaşım: Arkadaşlarını şaşırt</h2>
-          <p>Bir kart sonucunu paylaş, tartışmayı başlat</p>
+          <h2 data-i18n="s4.title">Sosyal paylaşım: Arkadaşlarını şaşırt</h2>
+          <p data-i18n="s4.sub">Bir kart sonucunu paylaş, tartışmayı başlat</p>
         </div>
       </div>
       <div class="scenario-body">
         <div class="s-context">
-          <p>Bir karta oy verdin. Sonuçlar beklenmedik — %50 tam ortadan bölünmüş. Ya da sen azınlıkta kaldın.</p>
-          <p>Paylaş butonuna basıyorsun. Whatsapp grubuna ya da sosyal medyaya atıyorsun. "Siz ne derdiniz?" diye soruyorsun. Tartışma başlıyor.</p>
-          <p>Pickside bir sohbet başlatıcı olarak da işe yarıyor.</p>
+          <p data-i18n="s4.p1">Bir karta oy verdin. Sonuçlar beklenmedik — %50 tam ortadan bölünmüş. Ya da sen azınlıkta kaldın.</p>
+          <p data-i18n="s4.p2">"Siz ne derdiniz?" diye soruyorsun. Tartışma başlıyor.</p>
+          <p data-i18n="s4.p3">Pickside bir sohbet başlatıcı olarak da işe yarıyor.</p>
         </div>
         <div class="s-card">
           <div class="s-card-label">📊 Sonuç • Topluluk bölünmüş</div>
@@ -213,32 +216,32 @@
   <div class="use-cases-grid">
     <div class="uc-card reveal d1">
       <div class="uc-icon">📰</div>
-      <h3>Haber takipçisi</h3>
-      <p>Güncel gelişmelere kendi perspektifini katıyorsun.</p>
+      <h3 data-i18n="uc1.title">Haber takipçisi</h3>
+      <p data-i18n="uc1.text">Güncel gelişmelere kendi perspektifini katıyorsun.</p>
     </div>
     <div class="uc-card reveal d2">
       <div class="uc-icon">🧠</div>
-      <h3>Kendini tanımak isteyenler</h3>
-      <p>Persona analizi sana davranış kalıplarını gösteriyor.</p>
+      <h3 data-i18n="uc2.title">Kendini tanımak isteyenler</h3>
+      <p data-i18n="uc2.text">Persona analizi sana davranış kalıplarını gösteriyor.</p>
     </div>
     <div class="uc-card reveal d3">
       <div class="uc-icon">⚡</div>
-      <h3>Kısa molalar</h3>
-      <p>2-3 dakikada 5-6 kart. Asansörde, beklerken.</p>
+      <h3 data-i18n="uc3.title">Kısa molalar</h3>
+      <p data-i18n="uc3.text">2-3 dakikada 5-6 kart. Asansörde, beklerken.</p>
     </div>
   </div>
 
   <div class="cta-section reveal">
-    <h2>Hemen dene.</h2>
-    <p>iOS ve Android için ücretsiz. Kayıt gerekmez.</p>
+    <h2 data-i18n="scenarios.cta-title">Hemen dene.</h2>
+    <p data-i18n="scenarios.cta-sub">iOS ve Android için ücretsiz. Kayıt gerekmez.</p>
     <div class="cta-btns">
       <a class="btn-dl btn-ios" href="#">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store'dan İndir
+        <span data-i18n="scenarios.btn-ios">App Store'dan İndir</span>
       </a>
       <a class="btn-dl btn-and" href="#">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.18.7.2 1.04.06l9.8-9.8-2.32-2.32-8.52 12.06zm15.09-12.45L15.5 9.57 5.24 3.7c-.4-.23-.86-.23-1.24-.02l10.55 10.55 3.72-2.92zM20.4 10.6l-2.3-1.33-2.6 2.6 2.6 2.6 2.32-1.34c.66-.38.66-1.15-.02-1.53zM4 3.68c-.02.1-.03.22-.03.35v15.94c0 .13.01.25.04.36l.1-.1L13 11.32 4 3.68z"/></svg>
-        Google Play'den İndir
+        <span data-i18n="scenarios.btn-android">Google Play'den İndir</span>
       </a>
     </div>
   </div>
@@ -249,19 +252,19 @@
     <div class="footer-top">
       <div class="footer-brand">
         <img src="logo.png" alt="Pickside">
-        <p>Gündemdeki konulara oy ver.<br>Toplumun nabzını ölç.</p>
+        <p data-i18n="footer.tagline">Gündemdeki konulara oy ver.<br>Toplumun nabzını ölç.</p>
         <div class="footer-stores">
           <a class="f-store" href="https://apps.apple.com/tr/app/pickside/id6759880059"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</a>
           <a class="f-store" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.18.7.2 1.04.06l9.8-9.8-2.32-2.32-8.52 12.06zm15.09-12.45L15.5 9.57 5.24 3.7c-.4-.23-.86-.23-1.24-.02l10.55 10.55 3.72-2.92zM20.4 10.6l-2.3-1.33-2.6 2.6 2.6 2.6 2.32-1.34c.66-.38.66-1.15-.02-1.53zM4 3.68c-.02.1-.03.22-.03.35v15.94c0 .13.01.25.04.36l.1-.1L13 11.32 4 3.68z"/></svg>Google Play</a>
         </div>
       </div>
       <div class="footer-nav">
-        <div class="footer-col"><h4>Uygulama</h4><a href="hakkimizda.html">Hakkımızda</a><a href="kullanim-senaryolari.html">Kullanım Senaryoları</a><a href="iletisim.html">İletişim</a></div>
-        <div class="footer-col"><h4>Yasal</h4><a href="gizlilik.html">Gizlilik Politikası</a><a href="kullanim-sartlari.html">Kullanım Şartları</a><a href="kvkk.html">KVKK Aydınlatma Metni</a><a href="child-safety.html">Çocuk Güvenliği Standartları</a><a href="sorumluluk-reddi.html">Sorumluluk Reddi</a></div>
-        <div class="footer-col"><h4>Destek</h4><a href="iletisim.html">İletişim</a><a href="data-deletion.html">Verilerimi Sıfırla</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.col-app">Uygulama</h4><a href="hakkimizda.html" data-i18n="footer.link-about">Hakkımızda</a><a href="kullanim-senaryolari.html" data-i18n="footer.link-scenarios">Kullanım Senaryoları</a><a href="iletisim.html" data-i18n="footer.link-contact">İletişim</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.col-legal">Yasal</h4><a href="gizlilik.html" data-i18n="footer.link-privacy">Gizlilik Politikası</a><a href="kullanim-sartlari.html" data-i18n="footer.link-terms">Kullanım Şartları</a><a href="kvkk.html" data-i18n="footer.link-kvkk">KVKK Aydınlatma Metni</a><a href="child-safety.html" data-i18n="footer.link-child">Çocuk Güvenliği Standartları</a><a href="sorumluluk-reddi.html" data-i18n="footer.link-disclaimer">Sorumluluk Reddi</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.col-support">Destek</h4><a href="iletisim.html" data-i18n="footer.link-contact">İletişim</a><a href="data-deletion.html" data-i18n="footer.link-deletion">Verilerimi Sıfırla</a></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Pickside. Tüm hakları saklıdır.</span><a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></div>
+    <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 Pickside. Tüm hakları saklıdır.</span><a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></div>
   </div>
 </footer>
 
@@ -269,5 +272,6 @@
   const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<script src="lang.js"></script>
 </body>
 </html>

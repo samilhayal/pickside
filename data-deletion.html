@@ -201,57 +201,58 @@
 
 <nav>
   <a href="index.html"><img src="logo.png" alt="Pickside"></a>
+  <button id="lang-btn" class="lang-btn" onclick="toggleLang()">EN</button>
 </nav>
 
 <main>
-  <div class="page-tag">🗑️ Veri Yönetimi</div>
-  <h1 class="page-title reveal">Verilerini<br>Sil.</h1>
-  <p class="page-sub reveal d1">Pickside verilerini kaldırmak için iki yol mevcut: doğrudan uygulama içinden ya da e-posta ile. Her iki yöntem de hızlı ve kesindir.</p>
+  <div class="page-tag" data-i18n="del.tag">🗑️ Veri Yönetimi</div>
+  <h1 class="page-title reveal" data-i18n="del.title">Verilerini<br>Sil.</h1>
+  <p class="page-sub reveal d1" data-i18n="del.sub">Pickside verilerini kaldırmak için iki yol mevcut: doğrudan uygulama içinden ya da e-posta ile. Her iki yöntem de hızlı ve kesindir.</p>
 
   <div class="grid">
     <div class="card red-card reveal d1">
-      <h2>📱 Uygulama içinden sıfırla</h2>
-      <p>Uygulamanın içinden verilerini anında silebilirsin. Ekstra işlem gerekmez.</p>
-      <p><strong>Profil › Ayarlar › Verilerimi Sıfırla</strong></p>
+      <h2 data-i18n="del.card1-title">📱 Uygulama içinden sıfırla</h2>
+      <p data-i18n="del.card1-p1">Uygulamanın içinden verilerini anında silebilirsin. Ekstra işlem gerekmez.</p>
+      <p data-i18n="del.card1-p2"><strong>Profil › Ayarlar › Verilerimi Sıfırla</strong></p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="index.html">← Ana Sayfaya Dön</a>
-        <a class="btn btn-ghost" href="mailto:info.pickside@gmail.com?subject=Pickside%20Veri%20Silme%20Talebi">E-posta Gönder</a>
+        <a class="btn btn-primary" href="index.html" data-i18n="del.card1-btn1">← Ana Sayfaya Dön</a>
+        <a class="btn btn-ghost" href="mailto:info.pickside@gmail.com?subject=Pickside%20Veri%20Silme%20Talebi" data-i18n="del.card1-btn2">E-posta Gönder</a>
       </div>
     </div>
     <div class="card reveal d2">
-      <h2>⚡ Hızlı Özet</h2>
+      <h2 data-i18n="del.card2-title">⚡ Hızlı Özet</h2>
       <ol>
-        <li>Uygulamada <strong>Profil › Ayarlar › Verilerimi Sıfırla</strong> adımını izle.</li>
-        <li>Alternatif olarak <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a> adresine yaz.</li>
-        <li>E-postanda uygulamadaki kullanıcı adını belirt.</li>
+        <li data-i18n="del.card2-li1">Uygulamada <strong>Profil › Ayarlar › Verilerimi Sıfırla</strong> adımını izle.</li>
+        <li data-i18n="del.card2-li2">Alternatif olarak <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a> adresine yaz.</li>
+        <li data-i18n="del.card2-li3">E-postanda uygulamadaki kullanıcı adını belirt.</li>
       </ol>
     </div>
   </div>
 
   <div class="detail-section reveal d1">
-    <div class="detail-header">📋 Detaylı Bilgi</div>
+    <div class="detail-header" data-i18n="del.detail-header">📋 Detaylı Bilgi</div>
     <div class="detail-body">
-      <h3>Silme Talebi Hakkı</h3>
-      <p>Pickside uygulamasını kullanan kullanıcılar, uygulama ile ilişkili tüm verilerinin silinmesini talep edebilir.</p>
+      <h3 data-i18n="del.s1-title">Silme Talebi Hakkı</h3>
+      <p data-i18n="del.s1-text">Pickside uygulamasını kullanan kullanıcılar, uygulama ile ilişkili tüm verilerinin silinmesini talep edebilir.</p>
 
-      <h3>Silinebilen Veriler</h3>
+      <h3 data-i18n="del.s2-title">Silinebilen Veriler</h3>
       <ul>
-        <li>Kullanıcı adı</li>
-        <li>Profil verileri</li>
-        <li>Oylama geçmişi</li>
-        <li>Bildirim cihaz kimliği</li>
+        <li data-i18n="del.s2-li1">Kullanıcı adı</li>
+        <li data-i18n="del.s2-li2">Profil verileri</li>
+        <li data-i18n="del.s2-li3">Oylama geçmişi</li>
+        <li data-i18n="del.s2-li4">Bildirim cihaz kimliği</li>
       </ul>
 
-      <h3>E-posta ile Talep Oluşturma</h3>
-      <p>Veri silme talebi için aşağıdaki adrese yazabilirsin:</p>
+      <h3 data-i18n="del.s3-title">E-posta ile Talep Oluşturma</h3>
+      <p data-i18n="del.s3-p1">Veri silme talebi için aşağıdaki adrese yazabilirsin:</p>
       <p><a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
-      <p>E-postanda uygulamada kullandığın kullanıcı adını belirtmen yeterli. Talebiniz doğrulandıktan sonra verileriniz sistemlerimizden kalıcı olarak silinir.</p>
+      <p data-i18n="del.s3-p2">E-postanda uygulamada kullandığın kullanıcı adını belirtmen yeterli. Talebiniz doğrulandıktan sonra verileriniz sistemlerimizden kalıcı olarak silinir.</p>
 
-      <h3>Ek Bilgi</h3>
-      <p>Yasal yükümlülükler nedeniyle anonim teknik loglar kısa bir süre saklanabilir.</p>
+      <h3 data-i18n="del.s4-title">Ek Bilgi</h3>
+      <p data-i18n="del.s4-text">Yasal yükümlülükler nedeniyle anonim teknik loglar kısa bir süre saklanabilir.</p>
 
-      <h3>Android Veri Silme URL'si</h3>
-      <p>Google Play politikası gereği resmi veri silme sayfası:</p>
+      <h3 data-i18n="del.s5-title">Android Veri Silme URL'si</h3>
+      <p data-i18n="del.s5-text">Google Play politikası gereği resmi veri silme sayfası:</p>
       <div class="url-box">https://samilhayal.github.io/pickside/data-deletion.html</div>
     </div>
   </div>
@@ -262,19 +263,19 @@
     <div class="footer-top">
       <div class="footer-brand">
         <img src="logo.png" alt="Pickside">
-        <p>Gündemdeki konulara oy ver.<br>Toplumun nabzını ölç.</p>
+        <p data-i18n="footer.tagline">Gündemdeki konulara oy ver.<br>Toplumun nabzını ölç.</p>
         <div class="footer-stores">
           <a class="f-store" href="https://apps.apple.com/tr/app/pickside/id6759880059"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</a>
           <a class="f-store" href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.18.7.2 1.04.06l9.8-9.8-2.32-2.32-8.52 12.06zm15.09-12.45L15.5 9.57 5.24 3.7c-.4-.23-.86-.23-1.24-.02l10.55 10.55 3.72-2.92zM20.4 10.6l-2.3-1.33-2.6 2.6 2.6 2.6 2.32-1.34c.66-.38.66-1.15-.02-1.53zM4 3.68c-.02.1-.03.22-.03.35v15.94c0 .13.01.25.04.36l.1-.1L13 11.32 4 3.68z"/></svg>Google Play</a>
         </div>
       </div>
       <div class="footer-nav">
-        <div class="footer-col"><h4>Uygulama</h4><a href="hakkimizda.html">Hakkımızda</a><a href="kullanim-senaryolari.html">Kullanım Senaryoları</a><a href="iletisim.html">İletişim</a></div>
-        <div class="footer-col"><h4>Yasal</h4><a href="gizlilik.html">Gizlilik Politikası</a><a href="kullanim-sartlari.html">Kullanım Şartları</a><a href="kvkk.html">KVKK Aydınlatma Metni</a><a href="child-safety.html">Çocuk Güvenliği Standartları</a><a href="sorumluluk-reddi.html">Sorumluluk Reddi</a></div>
-        <div class="footer-col"><h4>Destek</h4><a href="iletisim.html">İletişim</a><a href="data-deletion.html">Verilerimi Sıfırla</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.col-app">Uygulama</h4><a href="hakkimizda.html" data-i18n="footer.link-about">Hakkımızda</a><a href="kullanim-senaryolari.html" data-i18n="footer.link-scenarios">Kullanım Senaryoları</a><a href="iletisim.html" data-i18n="footer.link-contact">İletişim</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.col-legal">Yasal</h4><a href="gizlilik.html" data-i18n="footer.link-privacy">Gizlilik Politikası</a><a href="kullanim-sartlari.html" data-i18n="footer.link-terms">Kullanım Şartları</a><a href="kvkk.html" data-i18n="footer.link-kvkk">KVKK Aydınlatma Metni</a><a href="child-safety.html" data-i18n="footer.link-child">Çocuk Güvenliği Standartları</a><a href="sorumluluk-reddi.html" data-i18n="footer.link-disclaimer">Sorumluluk Reddi</a></div>
+        <div class="footer-col"><h4 data-i18n="footer.col-support">Destek</h4><a href="iletisim.html" data-i18n="footer.link-contact">İletişim</a><a href="data-deletion.html" data-i18n="footer.link-deletion">Verilerimi Sıfırla</a></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Pickside. Tüm hakları saklıdır.</span><a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></div>
+    <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 Pickside. Tüm hakları saklıdır.</span><a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></div>
   </div>
 </footer>
 
@@ -284,5 +285,6 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+<script src="lang.js"></script>
 </body>
 </html>
