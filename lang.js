@@ -35,6 +35,7 @@
       'footer.link-contact':    'İletişim',
       'footer.col-legal':       'Yasal',
       'footer.link-privacy':    'Gizlilik Politikası',
+      'footer.link-cookie':     'Çerez Politikası',
       'footer.link-terms':      'Kullanım Şartları',
       'footer.link-kvkk':       'KVKK Aydınlatma Metni',
       'footer.link-child':      'Çocuk Güvenliği Standartları',
@@ -96,53 +97,86 @@
       /* ── gizlilik.html ── */
       'gizlilik.tag':   '🔒 Yasal',
       'gizlilik.title': 'Gizlilik Politikası',
-      'gizlilik.date':  'Son Güncelleme: 6 Mart 2026',
+      'gizlilik.date':  'Son Güncelleme: 11 Nisan 2026',
       'gizlilik.content': `
-        <p>Bu gizlilik politikası Pickside mobil uygulaması için hazırlanmıştır.</p>
-        <h2>1. Toplanan Bilgiler</h2>
-        <p>Pickside anonim olarak çalışır. Uygulama kullanıcıdan ad, soyad, e-posta adresi veya kimlik bilgisi talep etmez.</p>
-        <p>Uygulama aşağıdaki anonim kullanım verilerini işler:</p>
+        <h2>1. Amaç</h2>
+        <p>İşbu Gizlilik Politikası, Pickside mobil uygulamasını kullanan kullanıcıların gizliliğinin korunmasına ilişkin esasları açıklamak amacıyla hazırlanmıştır. Pickside, kullanıcıların kişisel verilerinin korunmasına ve dijital ortamda güvenliğinin sağlanmasına önem vermekte olup, kullanıcı verilerinin korunması konusunda gerekli teknik ve idari tedbirleri almaktadır.</p>
+        <p>Bu Politika, Pickside mobil uygulamasının kullanımı sırasında elde edilen bilgilerin nasıl toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklamaktadır.</p>
+        <h2>2. Gizliliğin Korunmasına İlişkin Temel İlkeler</h2>
+        <p>Pickside, kullanıcı verilerinin korunması süreçlerinde aşağıdaki temel ilkelere uygun hareket etmektedir:</p>
         <ul>
-          <li>Verilen oylar</li>
-          <li>Takip edilen kartlar</li>
+          <li>Kullanıcı verileri hukuka ve dürüstlük kurallarına uygun şekilde işlenir. Veriler belirli, açık ve meşru amaçlarla toplanır.</li>
+          <li>Toplanan veriler işleme amacıyla bağlantılı, sınırlı ve ölçülü şekilde kullanılır.</li>
+          <li>Verilerin güvenliği için gerekli teknik ve idari tedbirler alınır.</li>
+        </ul>
+        <h2>3. Toplanan Bilgiler</h2>
+        <p>Pickside mobil uygulamasının kullanımı sırasında bazı teknik ve kullanım bilgileri elde edilebilir. Bu bilgiler, kullanıcıların uygulamayı nasıl kullandığını anlamak ve uygulamanın güvenli şekilde işletilmesini sağlamak amacıyla kullanılmaktadır.</p>
+        <p>Uygulama kapsamında elde edilebilecek bilgiler şunlardır:</p>
+        <ul>
+          <li>Kullanıcı tarafından belirlenen kullanıcı adı</li>
+          <li>IP adresi</li>
+          <li>Cihaz bilgileri</li>
+          <li>İşletim sistemi bilgileri</li>
+          <li>Uygulama kullanım verileri</li>
           <li>Uygulama içi etkileşim verileri</li>
-          <li>Anonim kullanıcı kimliği (sistem tarafından oluşturulan teknik ID)</li>
+          <li>Swipe (kaydırma) hareketlerine ilişkin tercihler</li>
+          <li>Teknik sistem kayıtları</li>
         </ul>
-        <h2>2. Veri Kullanım Amacı</h2>
-        <p>Toplanan anonim veriler yalnızca uygulamanın işlevselliğini sağlamak, topluluk sonuçlarını göstermek ve kullanıcı istatistiklerini oluşturmak amacıyla kullanılır.</p>
-        <h2>3. Veri Saklama ve Güvenlik</h2>
-        <p>Veriler güvenli sunucularda saklanır. Uygulama, veri güvenliğini sağlamak için endüstri standardı teknik önlemler kullanır.</p>
-        <h2>4. Kişisel Veri Paylaşımı</h2>
-        <p>Pickside kullanıcı verilerini üçüncü taraflara satmaz veya pazarlama amacıyla paylaşmaz.</p>
-        <p>Altyapı hizmetleri (örneğin bulut veritabanı sağlayıcısı) teknik hizmet sunmak amacıyla sınırlı veri işleyebilir.</p>
-        <h2>5. Üçüncü Taraf Hizmetler</h2>
-        <p>Uygulama, altyapı hizmeti olarak güvenli bulut servisleri kullanabilir. Bu servisler yalnızca teknik veri saklama amacıyla kullanılır.</p>
-        <h2>6. Çocukların Gizliliği</h2>
-        <p>Pickside 13 yaş altındaki bireyler için tasarlanmamıştır. Bilerek çocuklardan veri toplanmaz.</p>
-        <h2>7. Kullanıcı Hakları</h2>
-        <p>Kullanıcılar uygulama içindeki "Verilerimi Sıfırla" seçeneği ile anonim hesap verilerini silebilir.</p>
-        <p>Android için ayrı veri silme URL'si ve alternatif talep adımları için <a href="data-deletion.html">Veri Silme Sayfası</a>'nı inceleyebilirsiniz.</p>
-        <h2>8. Değişiklikler</h2>
-        <p>Bu gizlilik politikası zaman zaman güncellenebilir. Güncel sürüm her zaman bu sayfada yayınlanır.</p>
-        <h2>9. İletişim</h2>
-        <p>Sorularınız için: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
-        <h2>10. Çocuk Güvenliği Standartları (Child Safety Standards)</h2>
-        <p>Pickside is committed to preventing child sexual abuse and exploitation (CSAE) on its platform.</p>
-        <p><strong>We strictly prohibit:</strong></p>
+        <p>Pickside uygulamasında klasik anlamda bir üyelik sistemi bulunmamaktadır. Bu nedenle kullanıcıdan kimlik numarası, adres veya iletişim bilgisi gibi doğrudan kimliği belirleyici veriler talep edilmemektedir.</p>
+        <h2>4. Bilgilerin Kullanımı</h2>
+        <p>Pickside tarafından elde edilen bilgiler aşağıdaki amaçlarla kullanılabilir:</p>
         <ul>
-          <li>Any content involving sexual exploitation of minors</li>
-          <li>Sharing or requesting inappropriate content involving minors</li>
-          <li>Harassment or grooming behavior targeting minors</li>
+          <li>Uygulamanın teknik olarak çalışmasını sağlamak</li>
+          <li>Uygulama güvenliğini sağlamak</li>
+          <li>Kullanıcı deneyimini geliştirmek</li>
+          <li>Uygulama performansını analiz etmek</li>
+          <li>Teknik sorunları tespit etmek ve gidermek</li>
+          <li>Kötüye kullanımı ve güvenlik ihlallerini önlemek</li>
         </ul>
-        <p><strong>Moderation &amp; Enforcement:</strong></p>
-        <ul>
-          <li>Content is monitored and can be reported by users</li>
-          <li>Violating accounts are permanently banned</li>
-          <li>Suspicious activity may be reported to relevant authorities</li>
-        </ul>
-        <p><strong>User Reporting:</strong> Users can report inappropriate content directly within the app.</p>
-        <p><strong>Contact:</strong> For safety-related concerns: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
-        <p>Ayrıca detaylı bilgi için harici <a href="child-safety.html">Child Safety Policy</a> sayfamızı inceleyebilirsiniz.</p>
+        <p>Pickside, kullanıcı verilerini bu amaçlar dışında kullanmamayı taahhüt eder.</p>
+        <h2>5. Bilgi Güvenliği</h2>
+        <p>Pickside, kullanıcı verilerinin yetkisiz erişime, kayba veya hukuka aykırı kullanıma karşı korunması amacıyla uygun teknik ve idari güvenlik önlemleri uygulamaktadır.</p>
+        <p>Bu kapsamda sistem güvenliği, veri güvenliği ve erişim kontrolü gibi çeşitli güvenlik mekanizmaları kullanılmaktadır.</p>
+        <p>Ancak internet ortamında gerçekleştirilen veri iletimlerinin tamamen güvenli olduğuna ilişkin mutlak bir garanti verilmesi mümkün değildir.</p>
+        <h2>6. Üçüncü Taraf Hizmetler</h2>
+        <p>Pickside uygulaması, teknik altyapının sağlanması veya uygulama performansının analiz edilmesi amacıyla üçüncü taraf hizmet sağlayıcıları kullanabilir.</p>
+        <p>Bu hizmet sağlayıcılar, yalnızca Pickside tarafından belirlenen amaçlar doğrultusunda ve gerekli güvenlik önlemleri çerçevesinde veri işleyebilir.</p>
+        <h2>7. Çerezler ve Benzeri Teknolojiler</h2>
+        <p>Pickside mobil uygulaması, kullanıcı deneyimini geliştirmek ve uygulama performansını analiz etmek amacıyla çerezler ve benzeri teknolojiler kullanabilir. Bu teknolojiler hakkında detaylı bilgi <a href="cerez-politikasi.html">Pickside Çerez Politikası</a> kapsamında sunulmaktadır.</p>
+        <h2>8. Politika Değişiklikleri</h2>
+        <p>Pickside, işbu Gizlilik Politikası’nı mevzuat değişiklikleri, teknik gereklilikler veya uygulamanın işleyişine bağlı olarak güncelleyebilir. Politika’da yapılan değişiklikler uygulama üzerinden yayımlandığı tarihte yürürlüğe girer.</p>
+      `,
+
+      /* ── cerez-politikasi.html ── */
+      'cerez.tag':   '🍪 Yasal',
+      'cerez.title': 'Çerez ve Benzeri Teknolojiler Politikası',
+      'cerez.date':  'Son Güncelleme: 11 Nisan 2026',
+      'cerez.content': `
+        <h2>1. Amaç</h2>
+        <p>İşbu Çerez ve Benzeri Teknolojiler Politikası (“Politika”), Pickside mobil uygulamasını kullanan kullanıcıların cihazlarında kullanılan çerezler ve benzeri teknolojiler hakkında bilgi vermek amacıyla hazırlanmıştır.</p>
+        <p>Pickside, kullanıcı deneyiminin geliştirilmesi, uygulamanın teknik olarak işletilmesi, güvenliğin sağlanması ve uygulama kullanımına ilişkin analizlerin yapılabilmesi amacıyla çerezler ve benzeri teknolojiler kullanabilmektedir.</p>
+        <h2>2. Çerez Nedir?</h2>
+        <p>Çerezler, bir internet sitesi veya uygulama tarafından kullanıcıların cihazlarında saklanan küçük veri dosyalarıdır. Çerezler aracılığıyla kullanıcıların uygulamayı nasıl kullandığına ilişkin bazı bilgiler elde edilebilmektedir.</p>
+        <p>Mobil uygulamalarda çerezlere ek olarak cihaz tanımlayıcıları, SDK teknolojileri, uygulama içi analiz araçları ve benzeri teknolojiler de kullanılabilmektedir. İşbu Politika kapsamında bu teknolojilerin tamamı “çerez ve benzeri teknolojiler” olarak ifade edilmektedir.</p>
+        <h2>3. Pickside Tarafından Kullanılan Çerez Türleri</h2>
+        <p>Pickside uygulaması kapsamında aşağıdaki türlerde çerezler ve benzeri teknolojiler kullanılabilmektedir.</p>
+        <p><strong>Zorunlu Çerezler</strong></p>
+        <p>Bu çerezler uygulamanın teknik olarak çalışabilmesi için gerekli olan çerezlerdir. Uygulamanın düzgün çalışması, güvenliğin sağlanması ve temel sistem fonksiyonlarının yürütülmesi amacıyla kullanılmaktadır.</p>
+        <p><strong>Performans ve Analiz Çerezleri</strong></p>
+        <p>Bu çerezler, kullanıcıların uygulamayı nasıl kullandığını analiz etmek amacıyla kullanılmaktadır. Uygulama performansının ölçülmesi, kullanıcı davranışlarının anlaşılması ve uygulama deneyiminin geliştirilmesi amacıyla kullanılabilir.</p>
+        <p><strong>Fonksiyonel Çerezler</strong></p>
+        <p>Bu çerezler, kullanıcıların uygulama içerisindeki tercihlerini hatırlamak ve uygulama deneyimini geliştirmek amacıyla kullanılmaktadır.</p>
+        <h2>4. Çerezlerin Kullanım Amaçları</h2>
+        <p>Pickside mobil uygulamasında kullanılan çerezler ve benzeri teknolojiler, uygulamanın teknik olarak sağlıklı şekilde çalışmasını temin etmek, uygulama güvenliğini sağlamak ve kullanıcı deneyimini geliştirmek amacıyla kullanılmaktadır. Bu teknolojiler aracılığıyla elde edilen veriler, uygulamanın performansının ölçülmesi, kullanıcıların uygulama içerisindeki etkileşimlerinin analiz edilmesi ve uygulamanın işleyişinin iyileştirilmesi amacıyla değerlendirilebilmektedir.</p>
+        <p>Ayrıca çerezler ve benzeri teknolojiler, kullanıcıların uygulama içerisinde gerçekleştirdiği etkileşimlerin anlaşılması, uygulama kullanımına ilişkin istatistiksel analizlerin yapılması ve uygulamanın teknik altyapısının daha verimli şekilde yönetilmesi amacıyla kullanılabilir. Bu kapsamda elde edilen veriler, Pickside tarafından yalnızca uygulamanın geliştirilmesi, güvenliğinin sağlanması ve kullanıcı deneyiminin iyileştirilmesi amaçlarıyla kullanılmaktadır.</p>
+        <h2>5. Çerezler Aracılığıyla İşlenen Veriler</h2>
+        <p>Pickside mobil uygulamasında kullanılan çerezler ve benzeri teknolojiler aracılığıyla bazı teknik ve kullanım verileri işlenebilmektedir. Bu veriler, uygulamanın güvenli şekilde çalışmasının sağlanması, kullanıcı deneyiminin geliştirilmesi ve uygulama performansının analiz edilmesi amacıyla kullanılmaktadır.</p>
+        <p>Bu kapsamda çerezler ve benzeri teknolojiler aracılığıyla IP adresi, cihaz bilgileri, işletim sistemi bilgileri, uygulama kullanımına ilişkin teknik veriler, uygulama içerisindeki etkileşim bilgileri, kullanıcıların swipe (kaydırma) hareketlerine ilişkin tercihleri ve uygulama kullanımına ilişkin teknik log kayıtları işlenebilmektedir.</p>
+        <p>Söz konusu veriler, Pickside tarafından uygulamanın teknik olarak işletilmesi, sistem güvenliğinin sağlanması, uygulama performansının değerlendirilmesi ve kullanıcı deneyiminin geliştirilmesi amaçlarıyla kullanılmakta olup ilgili mevzuata uygun şekilde korunmaktadır.</p>
+        <h2>6. Çerezlerin Kontrolü</h2>
+        <p>Kullanıcılar cihazlarının ayarları üzerinden çerez kullanımına ilişkin tercihlerini değiştirebilir veya çerezleri sınırlandırabilir. Bununla birlikte çerez kullanımının sınırlandırılması veya devre dışı bırakılması, Pickside uygulamasının bazı özelliklerinin beklenen şekilde çalışmamasına neden olabilir.</p>
+        <h2>7. Politika’da Değişiklik</h2>
+        <p>Pickside, işbu Çerez Politikası’nı yürürlükteki mevzuat, teknik gereklilikler veya uygulamanın işleyişine bağlı olarak güncelleyebilir. Politika’da yapılacak değişiklikler uygulama üzerinden yayımlandığı tarihte yürürlüğe girer.</p>
       `,
 
       /* ── hakkimizda.html ── */
@@ -262,51 +296,70 @@
 
       /* ── kvkk.html ── */
       'kvkk.tag':   '🛡️ Yasal',
-      'kvkk.title': 'KVKK Aydınlatma Metni',
-      'kvkk.date':  'Son Güncelleme: 16 Mart 2026',
+      'kvkk.title': 'Kişisel Verilerin Korunması Hakkında Aydınlatma Metni',
+      'kvkk.date':  'Son Güncelleme: 12 Nisan 2026',
       'kvkk.content': `
-        <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("KVKK") 10. maddesi kapsamında Pickside uygulaması kullanıcılarını bilgilendirmek amacıyla hazırlanmıştır.</p>
+        <h2>Amaç</h2>
+        <p>İşbu Aydınlatma Metni, Pickside mobil uygulamasını kullanan kullanıcıların kişisel verilerinin hangi kapsamda toplandığını, nasıl işlendiğini, hangi amaçlarla kullanıldığını ve bu verilerin nasıl korunduğunu açıklamak amacıyla hazırlanmıştır.</p>
+        <p>Pickside, kullanıcıların gizliliğine ve kişisel verilerinin korunmasına önem vermekte olup, kişisel verilerin işlenmesi süreçlerinde 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve ilgili mevzuat hükümlerine uygun şekilde hareket etmeyi taahhüt eder.</p>
+        <h2>Açık Rıza Beyanı</h2>
+        <p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında tarafıma sunulan Kişisel Verilerin Korunmasına İlişkin Aydınlatma Metni’ni okuduğumu ve anladığımı beyan ederim.</p>
+        <p>Bu kapsamda Pickside mobil uygulaması tarafından, uygulama kullanım davranışlarımın analiz edilmesi, uygulama içerisindeki etkileşimlerimin değerlendirilmesi, içerik sunum sisteminin geliştirilmesi, kullanıcı deneyiminin iyileştirilmesi ve uygulama performansının analiz edilmesi amaçlarıyla; uygulama kullanım verilerimin, cihaz bilgilerimin, IP adresimin, uygulama içi etkileşim verilerimin ve swipe (kaydırma) hareketlerine ilişkin tercihlerimin işlenmesine açık rıza verdiğimi kabul ve beyan ederim.</p>
+        <p>Ayrıca söz konusu kişisel verilerin, Pickside uygulamasının teknik altyapısının işletilmesi, sistem güvenliğinin sağlanması ve uygulama hizmetlerinin sürdürülebilir şekilde sunulabilmesi amacıyla hizmet alınan teknik hizmet sağlayıcıları ile paylaşılmasına açık rıza verdiğimi kabul ederim.</p>
+        <p>Tarafımca verilen bu açık rızanın, dilediğim zaman Pickside’a başvurarak geri alınabileceği hususunda bilgilendirildiğimi ve bu hususu kabul ettiğimi beyan ederim.</p>
         <h2>1. Veri Sorumlusu</h2>
-        <p>Pickside uygulaması ("Uygulama") kapsamında kişisel verilerin işlenmesinde veri sorumlusu sıfatına sahip olan kişi uygulama geliştiricisidir.</p>
-        <p>İletişim: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
+        <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca kişisel verileriniz, veri sorumlusu sıfatıyla Pickside mobil uygulamasını işleten şirket tarafından aşağıda açıklanan kapsamda işlenebilecektir.</p>
         <h2>2. İşlenen Kişisel Veriler</h2>
-        <p>Pickside tamamen anonim çalışır. Uygulama, kullanıcıdan ad, soyad, e-posta adresi veya doğrudan kimlik tespitine yarayan hiçbir bilgi talep etmez.</p>
-        <p>Uygulama kapsamında işlenen teknik veriler şunlardır:</p>
+        <p>Pickside mobil uygulamasının kullanımı sırasında, uygulamanın teknik olarak işletilmesi, güvenliğinin sağlanması ve kullanıcı deneyiminin geliştirilmesi amacıyla sınırlı nitelikte bazı kişisel veriler işlenebilmektedir. İşlenen kişisel veriler aşağıdaki veri kategorileri kapsamında değerlendirilmektedir:</p>
         <table>
-          <tr><th>Veri Türü</th><th>Açıklama</th></tr>
-          <tr><td>Anonim kullanıcı kimliği</td><td>Sistem tarafından otomatik üretilen teknik ID</td></tr>
-          <tr><td>Oylama verileri</td><td>Hangi kartlara oy verildiği (anonim)</td></tr>
-          <tr><td>Takip verileri</td><td>Takip edilen kart listesi</td></tr>
-          <tr><td>Cihaz bildirimi kimliği</td><td>Push bildirim için cihaz token'ı (opsiyonel)</td></tr>
+          <tr><th>Veri Kategorisi</th><th>İşlenen Kişisel Veriler</th></tr>
+          <tr><td>Kullanıcı Kimlik Bilgileri</td><td>Kullanıcı tarafından uygulama içerisinde belirlenen kullanıcı adı</td></tr>
+          <tr><td>Cihaz ve Teknik Bilgiler</td><td>IP adresi, cihaz türü, işletim sistemi bilgileri, uygulama sürümü ve benzeri teknik veriler</td></tr>
+          <tr><td>Kullanım ve Etkileşim Verileri</td><td>Kullanıcıların uygulama içerisinde gerçekleştirdiği etkileşimler, swipe (kaydırma) hareketleri, içerik tercihleri, uygulama kullanım süreleri ve uygulama içi davranışlara ilişkin veriler</td></tr>
+          <tr><td>Log ve Sistem Kayıtları</td><td>Uygulamanın güvenliğinin sağlanması, teknik sorunların tespit edilmesi ve sistem performansının izlenmesi amacıyla oluşturulan log kayıtları ve benzeri teknik veriler</td></tr>
         </table>
+        <p>Pickside uygulaması kapsamında klasik anlamda bir üyelik sistemi bulunmamakta olup kullanıcıdan kimlik numarası, adres veya iletişim bilgileri gibi doğrudan kimlik tespitine yönelik veriler talep edilmemektedir. Bu kapsamda işlenen veriler ağırlıklı olarak uygulamanın teknik işleyişinin sağlanması, güvenliğinin korunması ve kullanıcı deneyiminin geliştirilmesi amacıyla sınırlı ölçüde toplanmaktadır.</p>
         <h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
-        <p>Toplanan teknik veriler yalnızca aşağıdaki amaçlarla işlenir:</p>
-        <ul>
-          <li>Uygulamanın temel işlevselliğinin sağlanması</li>
-          <li>Topluluk oylama sonuçlarının hesaplanması ve gösterilmesi</li>
-          <li>Kullanıcı deneyiminin iyileştirilmesi</li>
-          <li>Günlük bildirim gönderilmesi (kullanıcı izni dahilinde)</li>
-        </ul>
-        <h2>4. Hukuki İşleme Dayanağı</h2>
-        <p>Kişisel veriler KVKK madde 5/2-c kapsamında "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla" ve madde 5/2-f kapsamında "veri sorumlusunun meşru menfaatleri için zorunlu olması" hukuki dayanaklarına dayanılarak işlenmektedir.</p>
+        <p>Pickside mobil uygulaması kapsamında toplanan kişisel veriler, uygulamanın güvenli, etkin ve kullanıcı dostu şekilde işletilebilmesi amacıyla aşağıda belirtilen amaçlarla işlenmektedir:</p>
+        <table>
+          <tr><th>Veri İşleme Amacı</th><th>Açıklama</th></tr>
+          <tr><td>Uygulamanın Teknik Olarak İşletilmesi</td><td>Pickside uygulamasının düzgün çalışmasının sağlanması, sistem altyapısının yönetilmesi ve teknik süreçlerin yürütülmesi</td></tr>
+          <tr><td>Kullanıcı Deneyiminin Geliştirilmesi</td><td>Kullanıcıların uygulama içerisindeki etkileşimlerinin analiz edilmesi, içerik sunumunun iyileştirilmesi ve uygulama performansının geliştirilmesi</td></tr>
+          <tr><td>Uygulama Güvenliğinin Sağlanması</td><td>Uygulamanın kötüye kullanımının önlenmesi, sistem güvenliğinin sağlanması ve olası güvenlik ihlallerinin tespit edilmesi</td></tr>
+          <tr><td>Uygulama Performansının Analiz Edilmesi</td><td>Uygulama kullanımına ilişkin teknik verilerin değerlendirilmesi ve uygulama işleyişinin geliştirilmesine yönelik analizlerin yapılması</td></tr>
+          <tr><td>Teknik Sorunların Tespit Edilmesi ve Giderilmesi</td><td>Sistem hatalarının tespit edilmesi, teknik arızaların giderilmesi ve uygulamanın kesintisiz şekilde çalışmasının sağlanması</td></tr>
+          <tr><td>Hukuki Yükümlülüklerin Yerine Getirilmesi</td><td>Mevzuattan doğan yükümlülüklerin yerine getirilmesi ve yetkili kamu kurum ve kuruluşlarının taleplerinin karşılanması</td></tr>
+        </table>
+        <p>Pickside, kişisel verileri yalnızca yukarıda belirtilen amaçlarla ve ilgili mevzuat hükümlerine uygun şekilde işlemekte olup, veri işleme faaliyetlerinde ölçülülük ve veri minimizasyonu ilkelerine uygun hareket etmeyi taahhüt etmektedir.</p>
+        <h2>4. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</h2>
+        <p>Pickside mobil uygulaması kapsamında işlenen kişisel veriler, 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun (“KVKK”) 5. maddesinde yer alan veri işleme şartlarına uygun olarak işlenmektedir. Bu kapsamda kişisel veriler, öncelikle kullanıcıların Pickside uygulamasını kullanabilmesi ve uygulama kapsamında sunulan hizmetlerden yararlanabilmesi için gerekli olması nedeniyle bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili veri işleme şartına dayanılarak işlenebilmektedir.</p>
+        <p>Ayrıca Pickside, yürürlükteki mevzuattan doğan yükümlülüklerini yerine getirebilmek ve yetkili kamu kurum ve kuruluşlarının taleplerini karşılayabilmek amacıyla kişisel verileri işleyebilmektedir. Bu kapsamda veri işleme faaliyetleri, veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi hukuki sebebine dayanmaktadır.</p>
+        <p>Bunun yanı sıra, Pickside’ın olası hukuki uyuşmazlıklarda haklarını koruyabilmesi, gerekli kayıtların tutulması ve hukuki süreçlerin yürütülebilmesi amacıyla kişisel veriler bir hakkın tesisi, kullanılması veya korunması hukuki sebebine dayanılarak işlenebilmektedir.</p>
+        <p>Pickside tarafından gerçekleştirilen veri işleme faaliyetlerinin önemli bir bölümü ise uygulamanın güvenliğinin sağlanması, kötüye kullanımın önlenmesi, sistem performansının izlenmesi ve kullanıcı deneyiminin geliştirilmesi amacıyla yürütülmektedir. Bu kapsamda kişisel veriler, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması hukuki sebebine dayanılarak işlenmektedir.</p>
+        <p>Pickside, kişisel verilerin işlenmesi süreçlerinde KVKK’da yer alan genel ilkelere uygun hareket etmekte; kişisel verilerin hukuka ve dürüstlük kurallarına uygun şekilde, belirli, açık ve meşru amaçlarla sınırlı olarak ve işlendikleri amaçla bağlantılı, sınırlı ve ölçülü olacak şekilde işlenmesini sağlamayı amaçlamaktadır.</p>
         <h2>5. Kişisel Verilerin Aktarılması</h2>
-        <p>Pickside, kullanıcı verilerini üçüncü kişilere satmaz veya pazarlama amacıyla aktarmaz. Teknik altyapı kapsamında güvenli bulut hizmet sağlayıcıları sınırlı teknik veri işleyebilir. Bu aktarımlar KVKK ve ilgili mevzuata uygun şekilde gerçekleştirilir.</p>
-        <h2>6. Kişisel Verilerin Saklanma Süresi</h2>
-        <p>Anonim kullanıcı verileri, kullanıcı hesabı aktif olduğu sürece veya kullanıcı silme talebinde bulunana kadar saklanır. Yasal yükümlülükler kapsamındaki anonim teknik loglar kısa süreli olarak tutulabilir.</p>
-        <h2>7. Kişisel Veri Sahibinin Hakları (KVKK m. 11)</h2>
-        <p>KVKK'nın 11. maddesi kapsamında aşağıdaki haklarınız mevcuttur:</p>
+        <p>Pickside mobil uygulaması kapsamında işlenen kişisel veriler, 6698 sayılı Kişisel Verilerin Korunması Kanunu ve ilgili mevzuat hükümlerine uygun olarak, veri işleme amaçlarının gerektirdiği ölçüde ve sınırlı olarak üçüncü kişilere aktarılabilmektedir.</p>
+        <p>Bu kapsamda kişisel veriler; uygulamanın teknik altyapısının işletilmesi, sistem güvenliğinin sağlanması ve uygulama hizmetlerinin sürdürülebilir şekilde sunulabilmesi amacıyla bilişim altyapısı sağlayıcıları, teknik hizmet sağlayıcıları ve benzeri destek hizmeti sunan iş ortakları ile paylaşılabilmektedir.</p>
+        <p>Ayrıca Pickside, yürürlükteki mevzuattan doğan yükümlülüklerin yerine getirilmesi, hukuki süreçlerin yürütülmesi veya yetkili kamu kurum ve kuruluşları tarafından talep edilmesi halinde, kişisel verileri ilgili kamu kurum ve kuruluşlarına aktarabilmektedir.</p>
+        <p>Kişisel verilerin üçüncü kişilere aktarılması süreçlerinde Pickside, veri güvenliğinin sağlanması amacıyla gerekli teknik ve idari tedbirleri almakta ve veri aktarımının yalnızca veri işleme amaçlarıyla sınırlı olacak şekilde gerçekleştirilmesini sağlamaktadır. Kişisel veriler, ilgili mevzuatta öngörülen şartlar dışında üçüncü kişilerle paylaşılmamaktadır.</p>
+        <h2>6. Kişisel Verilerin Toplanma Yöntemi</h2>
+        <p>Pickside mobil uygulaması kapsamında kişisel veriler, kullanıcıların uygulamayı kullanması sırasında elektronik ortamda ve otomatik yöntemlerle toplanmaktadır. Bu veriler, kullanıcıların mobil cihazları üzerinden uygulamaya erişmeleri, uygulama içerisinde gerçekleştirilen etkileşimler ve uygulamanın teknik altyapısı tarafından oluşturulan sistem kayıtları aracılığıyla elde edilmektedir.</p>
+        <p>Kişisel veriler; uygulamanın çalışması sırasında oluşan teknik log kayıtları, kullanıcıların uygulama içerisindeki kullanım ve etkileşim bilgileri, cihaz ve sistem tarafından oluşturulan teknik veriler ile benzeri dijital izler üzerinden otomatik olarak toplanabilmektedir.</p>
+        <p>Pickside uygulaması kapsamında klasik anlamda bir üyelik sistemi bulunmadığından, kişisel veriler doğrudan kullanıcı tarafından girilen bilgilerden ziyade uygulamanın kullanımı sırasında oluşan teknik ve kullanım verileri üzerinden elde edilmektedir.</p>
+        <p>Toplanan kişisel veriler, uygulamanın teknik olarak işletilmesi, güvenliğinin sağlanması, kullanıcı deneyiminin geliştirilmesi ve mevzuattan doğan yükümlülüklerin yerine getirilmesi amaçlarıyla sınırlı olarak işlenmektedir. Bu süreçlerde veri minimizasyonu ilkesine uygun hareket edilmekte ve yalnızca gerekli olan veriler toplanmaktadır.</p>
+        <h2>7. KVKK Kapsamındaki Haklarınız</h2>
+        <p>KVKK’nın 11. maddesi uyarınca kişisel verilerinizle ilgili olarak aşağıdaki haklara sahipsiniz:</p>
         <ul>
-          <li>Kişisel veri işlenip işlenmediğini öğrenme</li>
-          <li>İşlenmişse buna ilişkin bilgi talep etme</li>
-          <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
-          <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
-          <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
-          <li>KVKK m. 7 çerçevesinde silinmesini veya yok edilmesini isteme</li>
-          <li>Otomatik sistemler vasıtasıyla analiz edilmesi sonucu aleyhe çıkan sonuca itiraz etme</li>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+          <li>İşlenen kişisel verilere ilişkin bilgi talep etme</li>
+          <li>Kişisel verilerin işlenme amacını öğrenme</li>
+          <li>Kişisel verilerin aktarılıp aktarılmadığını öğrenme</li>
+          <li>Eksik veya yanlış işlenen verilerin düzeltilmesini isteme</li>
+          <li>Kişisel verilerin silinmesini veya yok edilmesini talep etme</li>
+          <li>İşleme faaliyetlerine itiraz etme</li>
+          <li>Zarara uğramanız halinde tazminat talep etme</li>
         </ul>
-        <p>Bu haklarınızı kullanmak için doğrudan uygulama içinden <strong>Profil › Ayarlar › Verilerimi Sıfırla</strong> adımını izleyebilir ya da <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a> adresine e-posta gönderebilirsiniz.</p>
-        <h2>8. İletişim</h2>
-        <p>KVKK kapsamındaki talepleriniz için: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
+        <p>Bu haklarınıza ilişkin taleplerinizi veri sorumlusuna ileterek kullanabilirsiniz.</p>
       `,
 
       /* ── sorumluluk-reddi.html ── */
@@ -427,6 +480,7 @@
       'footer.link-contact':    'Contact',
       'footer.col-legal':       'Legal',
       'footer.link-privacy':    'Privacy Policy',
+      'footer.link-cookie':     'Cookie Policy',
       'footer.link-terms':      'Terms of Use',
       'footer.link-kvkk':       'KVKK Notice',
       'footer.link-child':      'Child Safety Standards',
@@ -488,53 +542,86 @@
       /* ── gizlilik.html ── */
       'gizlilik.tag':   '🔒 Legal',
       'gizlilik.title': 'Privacy Policy',
-      'gizlilik.date':  'Last Updated: March 6, 2026',
+      'gizlilik.date':  'Last Updated: April 11, 2026',
       'gizlilik.content': `
-        <p>This privacy policy has been prepared for the Pickside mobile application.</p>
-        <h2>1. Information Collected</h2>
-        <p>Pickside operates anonymously. The app does not request name, surname, email address, or any identifying information from users.</p>
-        <p>The app processes the following anonymous usage data:</p>
+        <h2>1. Purpose</h2>
+        <p>This Privacy Policy has been prepared to explain the principles regarding the protection of the privacy of users who use the Pickside mobile application. Pickside attaches importance to the protection of users' personal data and ensuring their security in digital environments, and takes the necessary technical and administrative measures regarding the protection of user data.</p>
+        <p>This Policy explains how information obtained during the use of the Pickside mobile application is collected, used, and protected.</p>
+        <h2>2. Core Principles Regarding the Protection of Privacy</h2>
+        <p>Pickside acts in accordance with the following core principles in processes related to the protection of user data:</p>
         <ul>
-          <li>Votes cast</li>
-          <li>Followed cards</li>
+          <li>User data is processed in accordance with the law and the principles of honesty and good faith. Data is collected for specific, explicit, and legitimate purposes.</li>
+          <li>Collected data is used in a manner that is relevant, limited, and proportionate to the processing purpose.</li>
+          <li>Necessary technical and administrative measures are taken for the security of the data.</li>
+        </ul>
+        <h2>3. Information Collected</h2>
+        <p>During the use of the Pickside mobile application, certain technical and usage information may be obtained. This information is used to understand how users use the application and to ensure that the application is operated securely.</p>
+        <p>The information that may be obtained within the scope of the application includes:</p>
+        <ul>
+          <li>Username determined by the user</li>
+          <li>IP address</li>
+          <li>Device information</li>
+          <li>Operating system information</li>
+          <li>Application usage data</li>
           <li>In-app interaction data</li>
-          <li>Anonymous user ID (system-generated technical ID)</li>
+          <li>Preferences regarding swipe actions</li>
+          <li>Technical system records</li>
         </ul>
-        <h2>2. Data Use Purpose</h2>
-        <p>Collected anonymous data is used solely to provide app functionality, display community results, and generate user statistics.</p>
-        <h2>3. Data Storage & Security</h2>
-        <p>Data is stored on secure servers. The app uses industry-standard technical measures to ensure data security.</p>
-        <h2>4. Personal Data Sharing</h2>
-        <p>Pickside does not sell or share user data with third parties for marketing purposes.</p>
-        <p>Infrastructure services (e.g., cloud database providers) may process limited data for technical service purposes.</p>
-        <h2>5. Third-Party Services</h2>
-        <p>The app may use secure cloud services as infrastructure. These services are used solely for technical data storage purposes.</p>
-        <h2>6. Children's Privacy</h2>
-        <p>Pickside is not designed for individuals under 13. We do not knowingly collect data from children.</p>
-        <h2>7. User Rights</h2>
-        <p>Users can delete their anonymous account data via the "Reset My Data" option within the app.</p>
-        <p>For Android, see the <a href="data-deletion.html">Data Deletion Page</a> for a separate deletion URL and alternative request steps.</p>
-        <h2>8. Changes</h2>
-        <p>This privacy policy may be updated from time to time. The current version is always published on this page.</p>
-        <h2>9. Contact</h2>
-        <p>For questions: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
-        <h2>10. Child Safety Standards</h2>
-        <p>Pickside is committed to preventing child sexual abuse and exploitation (CSAE) on its platform.</p>
-        <p><strong>We strictly prohibit:</strong></p>
+        <p>There is no traditional membership system in the Pickside application. Therefore, directly identifying data such as identity number, address, or contact information is not requested from the user.</p>
+        <h2>4. Use of Information</h2>
+        <p>The information obtained by Pickside may be used for the following purposes:</p>
         <ul>
-          <li>Any content involving sexual exploitation of minors</li>
-          <li>Sharing or requesting inappropriate content involving minors</li>
-          <li>Harassment or grooming behavior targeting minors</li>
+          <li>Ensuring the technical operation of the application</li>
+          <li>Ensuring application security</li>
+          <li>Improving user experience</li>
+          <li>Analyzing application performance</li>
+          <li>Detecting and resolving technical problems</li>
+          <li>Preventing misuse and security breaches</li>
         </ul>
-        <p><strong>Moderation &amp; Enforcement:</strong></p>
-        <ul>
-          <li>Content is monitored and can be reported by users</li>
-          <li>Violating accounts are permanently banned</li>
-          <li>Suspicious activity may be reported to relevant authorities</li>
-        </ul>
-        <p><strong>User Reporting:</strong> Users can report inappropriate content directly within the app.</p>
-        <p><strong>Contact:</strong> For safety-related concerns: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
-        <p>For more details, see our external <a href="child-safety.html">Child Safety Policy</a> page.</p>
+        <p>Pickside undertakes not to use user data outside these purposes.</p>
+        <h2>5. Information Security</h2>
+        <p>Pickside implements appropriate technical and administrative security measures to protect user data against unauthorized access, loss, or unlawful use.</p>
+        <p>Within this scope, various security mechanisms such as system security, data security, and access control are used.</p>
+        <p>However, it is not possible to provide an absolute guarantee that data transmissions carried out over the internet are completely secure.</p>
+        <h2>6. Third-Party Services</h2>
+        <p>The Pickside application may use third-party service providers for the provision of technical infrastructure or the analysis of application performance.</p>
+        <p>These service providers may process data only in line with the purposes determined by Pickside and within the framework of the necessary security measures.</p>
+        <h2>7. Cookies and Similar Technologies</h2>
+        <p>The Pickside mobile application may use cookies and similar technologies to improve user experience and analyze application performance. Detailed information about these technologies is provided under the <a href="cerez-politikasi.html">Pickside Cookie Policy</a>.</p>
+        <h2>8. Policy Changes</h2>
+        <p>Pickside may update this Privacy Policy depending on legislative changes, technical requirements, or the operation of the application. Changes made to the Policy enter into force on the date they are published through the application.</p>
+      `,
+
+      /* ── cerez-politikasi.html ── */
+      'cerez.tag':   '🍪 Legal',
+      'cerez.title': 'Cookie and Similar Technologies Policy',
+      'cerez.date':  'Last Updated: April 11, 2026',
+      'cerez.content': `
+        <h2>1. Purpose</h2>
+        <p>This Cookie and Similar Technologies Policy ("Policy") has been prepared to provide information about the cookies and similar technologies used on the devices of users who use the Pickside mobile application.</p>
+        <p>Pickside may use cookies and similar technologies for the purposes of improving user experience, operating the application technically, ensuring security, and carrying out analyses regarding application usage.</p>
+        <h2>2. What Is a Cookie?</h2>
+        <p>Cookies are small data files stored on users' devices by a website or application. Through cookies, certain information may be obtained regarding how users use the application.</p>
+        <p>In mobile applications, in addition to cookies, device identifiers, SDK technologies, in-app analytics tools, and similar technologies may also be used. Within the scope of this Policy, all of these technologies are referred to as "cookies and similar technologies."</p>
+        <h2>3. Types of Cookies Used by Pickside</h2>
+        <p>Within the scope of the Pickside application, the following types of cookies and similar technologies may be used.</p>
+        <p><strong>Strictly Necessary Cookies</strong></p>
+        <p>These cookies are required for the technical operation of the application. They are used to ensure that the application functions properly, security is maintained, and core system functions are carried out.</p>
+        <p><strong>Performance and Analytics Cookies</strong></p>
+        <p>These cookies are used to analyze how users use the application. They may be used to measure application performance, understand user behavior, and improve the application experience.</p>
+        <p><strong>Functional Cookies</strong></p>
+        <p>These cookies are used to remember users' preferences within the application and improve the application experience.</p>
+        <h2>4. Purposes of Cookie Use</h2>
+        <p>The cookies and similar technologies used in the Pickside mobile application are used to ensure the healthy technical operation of the application, provide application security, and improve user experience. The data obtained through these technologies may be evaluated for measuring application performance, analyzing users' interactions within the application, and improving the operation of the application.</p>
+        <p>In addition, cookies and similar technologies may be used to understand the interactions users perform within the application, conduct statistical analyses regarding application use, and manage the technical infrastructure of the application more efficiently. The data obtained within this scope is used by Pickside solely for the purposes of improving the application, ensuring its security, and enhancing user experience.</p>
+        <h2>5. Data Processed Through Cookies</h2>
+        <p>Through the cookies and similar technologies used in the Pickside mobile application, certain technical and usage data may be processed. This data is used to ensure the secure operation of the application, improve user experience, and analyze application performance.</p>
+        <p>Within this scope, IP address, device information, operating system information, technical data relating to application use, interaction information within the application, users' preferences regarding swipe actions, and technical log records relating to application use may be processed through cookies and similar technologies.</p>
+        <p>Such data is used by Pickside for the purposes of operating the application technically, ensuring system security, evaluating application performance, and improving user experience, and is protected in accordance with applicable legislation.</p>
+        <h2>6. Control of Cookies</h2>
+        <p>Users may change their preferences regarding cookie use through their device settings or restrict cookies. However, restricting or disabling cookie use may cause certain features of the Pickside application not to function as expected.</p>
+        <h2>7. Changes to the Policy</h2>
+        <p>Pickside may update this Cookie Policy depending on applicable legislation, technical requirements, or the operation of the application. Changes made to the Policy enter into force on the date they are published through the application.</p>
       `,
 
       /* ── hakkimizda.html ── */
@@ -654,51 +741,70 @@
 
       /* ── kvkk.html ── */
       'kvkk.tag':   '🛡️ Legal',
-      'kvkk.title': 'KVKK Disclosure Notice',
-      'kvkk.date':  'Last Updated: March 16, 2026',
+      'kvkk.title': 'Information Notice on the Protection of Personal Data',
+      'kvkk.date':  'Last Updated: April 12, 2026',
       'kvkk.content': `
-        <p>This disclosure notice has been prepared to inform Pickside app users within the scope of Article 10 of the Personal Data Protection Law No. 6698 ("KVKK" — Turkish data protection legislation).</p>
+        <h2>Purpose</h2>
+        <p>This Information Notice has been prepared to explain within what scope the personal data of users who use the Pickside mobile application is collected, how it is processed, for which purposes it is used, and how this data is protected.</p>
+        <p>Pickside attaches importance to the privacy of users and the protection of their personal data, and undertakes to act in accordance with the Personal Data Protection Law No. 6698 ("KVKK") and the relevant legislation in personal data processing processes.</p>
+        <h2>Explicit Consent Statement</h2>
+        <p>I declare that I have read and understood the Information Notice on the Protection of Personal Data presented to me within the scope of the Personal Data Protection Law No. 6698.</p>
+        <p>Within this scope, I accept and declare that I give my explicit consent to the processing of my application usage data, device information, IP address, in-app interaction data, and my preferences related to swipe actions for the purposes of analyzing my app usage behavior, evaluating my in-app interactions, improving the content delivery system, enhancing user experience, and analyzing application performance by the Pickside mobile application.</p>
+        <p>I also accept that I give my explicit consent to the sharing of such personal data with technical service providers from whom support is received for the operation of Pickside's technical infrastructure, ensuring system security, and enabling the sustainable delivery of application services.</p>
+        <p>I declare that I have been informed that I may withdraw this explicit consent at any time by applying to Pickside, and that I accept this matter.</p>
         <h2>1. Data Controller</h2>
-        <p>The app developer acts as the data controller for the processing of personal data within the scope of the Pickside application.</p>
-        <p>Contact: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
+        <p>Pursuant to the Personal Data Protection Law No. 6698 ("KVKK"), your personal data may be processed by the company operating the Pickside mobile application, acting as the data controller, within the scope explained below.</p>
         <h2>2. Personal Data Processed</h2>
-        <p>Pickside operates completely anonymously. The app does not request name, surname, email address, or any directly identifying information from users.</p>
-        <p>The technical data processed within the app:</p>
+        <p>During the use of the Pickside mobile application, a limited set of personal data may be processed for the purposes of technically operating the application, ensuring its security, and improving user experience. The processed personal data is evaluated under the following data categories:</p>
         <table>
-          <tr><th>Data Type</th><th>Description</th></tr>
-          <tr><td>Anonymous user ID</td><td>Automatically generated technical ID</td></tr>
-          <tr><td>Voting data</td><td>Which cards were voted on (anonymous)</td></tr>
-          <tr><td>Follow data</td><td>List of followed cards</td></tr>
-          <tr><td>Device notification ID</td><td>Device token for push notifications (optional)</td></tr>
+          <tr><th>Data Category</th><th>Personal Data Processed</th></tr>
+          <tr><td>User Identity Information</td><td>Username determined by the user within the application</td></tr>
+          <tr><td>Device and Technical Information</td><td>IP address, device type, operating system information, application version, and similar technical data</td></tr>
+          <tr><td>Usage and Interaction Data</td><td>Interactions users perform within the application, swipe actions, content preferences, application usage durations, and data relating to in-app behaviors</td></tr>
+          <tr><td>Log and System Records</td><td>Log records and similar technical data created for ensuring application security, detecting technical issues, and monitoring system performance</td></tr>
         </table>
-        <h2>3. Purposes of Personal Data Processing</h2>
-        <p>Collected technical data is processed only for the following purposes:</p>
-        <ul>
-          <li>Providing core app functionality</li>
-          <li>Calculating and displaying community voting results</li>
-          <li>Improving user experience</li>
-          <li>Sending daily notifications (with user permission)</li>
-        </ul>
-        <h2>4. Legal Basis for Processing</h2>
-        <p>Personal data is processed based on KVKK Article 5/2-c ("directly related to the establishment or performance of a contract") and Article 5/2-f ("necessary for the legitimate interests of the data controller").</p>
+        <p>There is no traditional membership system within the Pickside application, and therefore data aimed at directly identifying the user, such as identity number, address, or contact details, is not requested. The data processed within this scope is collected primarily in a limited manner for ensuring the technical functioning of the application, protecting its security, and improving user experience.</p>
+        <h2>3. Purposes of Processing Personal Data</h2>
+        <p>The personal data collected within the scope of the Pickside mobile application is processed for the following purposes so that the application can be operated securely, effectively, and in a user-friendly manner:</p>
+        <table>
+          <tr><th>Processing Purpose</th><th>Description</th></tr>
+          <tr><td>Technical Operation of the Application</td><td>Ensuring the proper functioning of the Pickside application, managing system infrastructure, and carrying out technical processes</td></tr>
+          <tr><td>Improving User Experience</td><td>Analyzing users' interactions within the application, improving content delivery, and enhancing application performance</td></tr>
+          <tr><td>Ensuring Application Security</td><td>Preventing misuse of the application, ensuring system security, and detecting possible security breaches</td></tr>
+          <tr><td>Analyzing Application Performance</td><td>Evaluating technical data relating to application use and conducting analyses aimed at improving the operation of the application</td></tr>
+          <tr><td>Detecting and Resolving Technical Problems</td><td>Detecting system errors, resolving technical failures, and ensuring the uninterrupted operation of the application</td></tr>
+          <tr><td>Fulfilling Legal Obligations</td><td>Fulfilling obligations arising from legislation and responding to requests from competent public institutions and organizations</td></tr>
+        </table>
+        <p>Pickside undertakes to process personal data only for the purposes specified above and in accordance with the relevant legislation, and to act in accordance with the principles of proportionality and data minimization in data processing activities.</p>
+        <h2>4. Legal Grounds for Processing Personal Data</h2>
+        <p>The personal data processed within the scope of the Pickside mobile application is processed in accordance with the data processing conditions set out in Article 5 of the Personal Data Protection Law No. 6698 ("KVKK"). In this context, personal data may first be processed based on the data processing condition that it is directly related to the establishment or performance of a contract, as it is necessary for users to be able to use the Pickside application and benefit from the services offered within the application.</p>
+        <p>In addition, Pickside may process personal data in order to fulfill its obligations arising from applicable legislation and to respond to requests from competent public institutions and organizations. In this context, data processing activities are based on the legal ground of the data controller being able to fulfill its legal obligation.</p>
+        <p>Furthermore, personal data may be processed based on the legal ground that processing is necessary for the establishment, exercise, or protection of a right, in order for Pickside to protect its rights in possible legal disputes, keep necessary records, and conduct legal processes.</p>
+        <p>A significant part of the data processing activities carried out by Pickside is conducted for the purposes of ensuring application security, preventing misuse, monitoring system performance, and improving user experience. In this context, personal data is processed based on the legal ground that data processing is necessary for the legitimate interests of the data controller.</p>
+        <p>Pickside aims to act in accordance with the general principles set out in KVKK in personal data processing processes and to ensure that personal data is processed lawfully and in accordance with the rules of honesty and good faith, in a limited manner for specific, explicit, and legitimate purposes, and in a way that is relevant, limited, and proportionate to the purposes for which it is processed.</p>
         <h2>5. Transfer of Personal Data</h2>
-        <p>Pickside does not sell or transfer user data to third parties for marketing purposes. Secure cloud service providers may process limited technical data as part of the technical infrastructure. These transfers comply with KVKK and applicable legislation.</p>
-        <h2>6. Data Retention Period</h2>
-        <p>Anonymous user data is retained as long as the user account is active or until the user requests deletion. Anonymous technical logs required for legal obligations may be kept for a short period.</p>
-        <h2>7. Rights of the Data Subject (KVKK Art. 11)</h2>
-        <p>Under Article 11 of KVKK, you have the following rights:</p>
+        <p>The personal data processed within the scope of the Pickside mobile application may be transferred to third parties to a limited extent and to the degree required by the data processing purposes, in accordance with the Personal Data Protection Law No. 6698 and the relevant legislation.</p>
+        <p>In this context, personal data may be shared with IT infrastructure providers, technical service providers, and business partners providing similar support services for the purposes of operating the technical infrastructure of the application, ensuring system security, and enabling the sustainable delivery of application services.</p>
+        <p>In addition, Pickside may transfer personal data to relevant public institutions and organizations in cases where it is necessary to fulfill obligations arising from applicable legislation, conduct legal processes, or where such data is requested by competent public institutions and organizations.</p>
+        <p>In processes involving the transfer of personal data to third parties, Pickside takes the necessary technical and administrative measures to ensure data security and ensures that the transfer is carried out only in a manner limited to the data processing purposes. Personal data is not shared with third parties outside the conditions stipulated by the relevant legislation.</p>
+        <h2>6. Method of Collecting Personal Data</h2>
+        <p>Within the scope of the Pickside mobile application, personal data is collected in electronic environments and through automated means while users use the application. This data is obtained through users accessing the application via their mobile devices, interactions carried out within the application, and system records created by the technical infrastructure of the application.</p>
+        <p>Personal data may be collected automatically through technical log records generated during the operation of the application, users' usage and interaction information within the application, technical data generated by the device and system, and similar digital traces.</p>
+        <p>Since there is no traditional membership system within the Pickside application, personal data is obtained not so much from information directly entered by the user, but rather from technical and usage data generated during the use of the application.</p>
+        <p>The collected personal data is processed only for the purposes of technically operating the application, ensuring security, improving user experience, and fulfilling obligations arising from legislation. In these processes, the principle of data minimization is observed and only the data that is necessary is collected.</p>
+        <h2>7. Your Rights Under KVKK</h2>
+        <p>Pursuant to Article 11 of KVKK, you have the following rights regarding your personal data:</p>
         <ul>
-          <li>To learn whether personal data is being processed</li>
-          <li>To request information if processed</li>
-          <li>To learn the purpose and whether it is used accordingly</li>
-          <li>To know third parties to whom data is transferred</li>
-          <li>To request correction of incomplete or incorrect data</li>
-          <li>To request deletion or destruction under KVKK Art. 7</li>
-          <li>To object to outcomes arising from automated analysis</li>
+          <li>To learn whether your personal data is being processed</li>
+          <li>To request information regarding personal data that has been processed</li>
+          <li>To learn the purpose of processing personal data</li>
+          <li>To learn whether personal data has been transferred</li>
+          <li>To request correction of incomplete or incorrectly processed data</li>
+          <li>To request the deletion or destruction of personal data</li>
+          <li>To object to processing activities</li>
+          <li>To request compensation in case you suffer damage</li>
         </ul>
-        <p>To exercise these rights, follow <strong>Profile › Settings › Reset My Data</strong> within the app, or email <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a>.</p>
-        <h2>8. Contact</h2>
-        <p>For KVKK-related requests: <a href="mailto:info.pickside@gmail.com">info.pickside@gmail.com</a></p>
+        <p>You may exercise these rights by submitting your requests to the data controller.</p>
       `,
 
       /* ── sorumluluk-reddi.html ── */
