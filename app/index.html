@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickside | Yonlendiriliyor</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://www.pickside.social/app/">
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --text: #122033;
+            --muted: #5d6b80;
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --border: #d9e1ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(13, 110, 253, 0.12), transparent 30%),
+                linear-gradient(180deg, #fbfcff 0%, var(--bg) 100%);
+        }
+
+        main {
+            width: min(100%, 520px);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 45px rgba(18, 32, 51, 0.08);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .links {
+            display: grid;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: #ffffff;
+        }
+
+        .button-secondary:hover {
+            background: #f8fbff;
+            transform: translateY(-1px);
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        (function () {
+            const HOME_URL = "https://www.pickside.social/";
+            const IOS_STORE_URL = "https://apps.apple.com/tr/app/pickside/id6759880059";
+            const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.pickside.app";
+
+            function goTo(url) {
+                window.location.replace(url);
+            }
+
+            const ua = navigator.userAgent || navigator.vendor || window.opera || "";
+            const platform = navigator.platform || "";
+            const maxTouchPoints = navigator.maxTouchPoints || 0;
+
+            const isIOS =
+                /iPad|iPhone|iPod/i.test(ua) ||
+                (platform === "MacIntel" && maxTouchPoints > 1);
+            const isAndroid = /Android/i.test(ua);
+
+            if (isIOS) {
+                goTo(IOS_STORE_URL);
+                return;
+            }
+
+            if (isAndroid) {
+                goTo(ANDROID_STORE_URL);
+                return;
+            }
+
+            goTo(HOME_URL);
+        })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://www.pickside.social/">
+    </noscript>
+</head>
+<body>
+    <main>
+        <h1>Pickside yonlendiriliyor</h1>
+        <p>Cihaziniz algilanarak uygun magaza sayfasina veya ana siteye yonlendirileceksiniz.</p>
+
+        <div class="links">
+            <a class="button button-primary" href="https://apps.apple.com/tr/app/pickside/id6759880059">App Store'a git</a>
+            <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.pickside.app">Google Play'e git</a>
+            <a class="button button-secondary" href="https://www.pickside.social/">Ana siteye don</a>
+        </div>
+
+        <p class="note">Yonlendirme olmazsa yukaridaki baglantilardan devam edebilirsiniz.</p>
+    </main>
+</body>
+</html>
